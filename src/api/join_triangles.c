@@ -1,5 +1,5 @@
 #include <cairo.h>
-#include "../includes/include.h"
+#include "../api/include.h"
 
 int join_triangles(char tri_one[50], char tri_two[50], char tri_three[50], char tri_four[50], char tri_five[50], char tri_six[50], char tri_seven[50], char img_name[50]) {
 cairo_surface_t *surface = 

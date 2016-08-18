@@ -286,6 +286,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = foreign
 SUBDIRS = src/icons src/logo
+INCLUDE = api/include.h
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 

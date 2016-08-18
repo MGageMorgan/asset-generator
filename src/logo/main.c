@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <argp.h>
 #include <gtk/gtk.h>
-#include "../includes/include.h"
+#include "../api/include.h"
 char name[100] = "Christoffen Asset Generator - Logo";
 
 static void
