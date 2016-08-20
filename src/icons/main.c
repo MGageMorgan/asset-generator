@@ -9,6 +9,6 @@ int main(void) {
 	rhombus(256, 256, 0.01, 0.5, 0.99, 0.8, 84.0, 82.0, 102.0, 82.0, 103.0, 99.0, 85.0, 99.0, "box5.png");
 	polygon(256, 256, 0.5, 0.4, 1, 0.8, 64.0, 51.0, 184.0, 51.0, 185.0, 135.0, 107.0, 135.0, 108.0, 134.0, 83.0, 162.0, 80.0, 134.0, 80.0, 135.0, 63.0, 135.0, "box6.png");
 	rhombus(256, 256, 0.01, 0.5, 0.99, 0.8, 115, 80, 132, 82, 137, 100, 117, 100, "box7.png");
-	join_shapes("box1.png", "box2.png", "box3.png", "box4.png", "box6.png", "box7.png", "box5.png", "chat.png");
+	join_icon_chat("box1.png", "box2.png", "box3.png", "box4.png", "box6.png", "box7.png", "box5.png", "chat.png");
 return 0;
 }
