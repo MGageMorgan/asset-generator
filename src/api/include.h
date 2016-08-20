@@ -13,35 +13,20 @@
 #define INCLUDE_H_INCLUDED
 #include <cairo.h>
 
-/*
- * If I find this in another file somewhere, I'll come back 
- * I'll come back here and document it.
- */
+int join_shapes(char tri_one[50], char tri_two[50], char tri_three[50], char tri_four[50], char tri_five[50], char tri_six[50], char tri_seven[50], char img_name[50]);
+
+void polygon(int img_width, int img_height, double r, double g, double b, double a, double verticeX1, double verticeY1, double verticeX2, double verticeY2, double verticeX3, double verticeY3, double verticeX4, double verticeY4, double verticeX5, double verticeY5, double verticeX6, double verticeY6, double verticeX7, double verticeY7, double verticeX8, double verticeY8, double verticeX9, double verticeY9, char img_name[50]);
+
+void rhombus(int img_width, int img_height, double r, double g, double b, double a, double verticeX1, double verticeY1, double verticeX2, double verticeY2, double verticeX3, double verticeY3, double verticeX4, double verticeY4, char img_name[50]);
+
 char args[50];
 
-/*
- * Declares the colored_triangle() 
- * function used in options.c
- */
 void colored_triangle(int img_width, int img_height, double r, double g, double b, double a, double verticeX1, double verticeY1, double verticeX2, double verticeY2, double verticeX3, double verticeY3, char img_name[50]);
 
-/*
- * Declares the outlined_triangle() 
- * function used in options.c
- */
 void outlined_triangle(int img_width, int img_height, double scaleX1, double scaleY1, double lineX1, double lineY1, double lineX2, double lineY2, double lineX3, double lineY3, double finishX1, double finishY1, char img_name[50]);
 
-/*
- * Declares the join_triangles() 
- * function used in options.c
- */
 int join_triangles(char tri_one[50], char tri_two[50], char tri_three[50], char tri_four[50], char tri_five[50], char tri_six[50], char tri_seven[50], char img_name[50]); 
 
-/*
- * The following are definitions 
- * for functions used for the first 
- * time in options.c
- */
 void outlined_nologo();
 
 void outlined_all();
