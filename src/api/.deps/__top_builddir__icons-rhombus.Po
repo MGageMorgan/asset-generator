@@ -1,0 +1,16 @@
+../api/__top_builddir__icons-rhombus.o: ../api/rhombus.c \
+ /usr/include/stdc-predef.h /usr/include/cairo/cairo.h \
+ /usr/include/cairo/cairo-version.h /usr/include/cairo/cairo-features.h \
+ /usr/include/cairo/cairo-deprecated.h ../api/../api/include.h
+
+/usr/include/stdc-predef.h:
+
+/usr/include/cairo/cairo.h:
+
+/usr/include/cairo/cairo-version.h:
+
+/usr/include/cairo/cairo-features.h:
+
+/usr/include/cairo/cairo-deprecated.h:
+
+../api/../api/include.h:

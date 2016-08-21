@@ -1,0 +1,16 @@
+__top_builddir__logo-options.o: options.c /usr/include/stdc-predef.h \
+ /usr/include/cairo/cairo.h /usr/include/cairo/cairo-version.h \
+ /usr/include/cairo/cairo-features.h \
+ /usr/include/cairo/cairo-deprecated.h ../api/include.h
+
+/usr/include/stdc-predef.h:
+
+/usr/include/cairo/cairo.h:
+
+/usr/include/cairo/cairo-version.h:
+
+/usr/include/cairo/cairo-features.h:
+
+/usr/include/cairo/cairo-deprecated.h:
+
+../api/include.h:

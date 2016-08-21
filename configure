@@ -3439,7 +3439,7 @@ fi
 
 
 
-
+cp src/logo/main_window.ui ../..
 # Checks for libraries.
 
 # Checks for header files.
@@ -5055,4 +5055,5 @@ if test -n "$ac_unrecognized_opts" && test "$enable_option_checking" != no; then
   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: unrecognized options: $ac_unrecognized_opts" >&5
 $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
 fi
+
 
