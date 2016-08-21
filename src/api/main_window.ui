@@ -2,326 +2,580 @@
 <!-- Generated with glade 3.20.0 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
-  <object class="GtkWindow" id="main">
+  <object class="GtkApplicationWindow" id="main">
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Christoffen Assets - Logo</property>
-    <property name="resizable">False</property>
+    <property name="title" translatable="yes">Christoffen Assets</property>
     <property name="window_position">center</property>
-    <property name="default_width">450</property>
+    <property name="default_width">880</property>
     <property name="default_height">550</property>
     <child>
-      <object class="GtkBox">
-        <property name="width_request">23</property>
-        <property name="height_request">9</property>
+      <object class="GtkNotebook">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="margin_left">11</property>
-        <property name="margin_right">11</property>
-        <property name="hexpand">True</property>
-        <property name="vexpand">True</property>
-        <property name="border_width">0</property>
-        <property name="orientation">vertical</property>
+        <property name="can_focus">True</property>
+        <property name="hexpand">False</property>
+        <property name="vexpand">False</property>
+        <property name="tab_pos">left</property>
+        <property name="show_border">False</property>
         <child>
-          <object class="GtkFrame" id="Frankenlogos">
+          <object class="GtkGrid">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="margin_bottom">11</property>
-            <property name="label_xalign">0</property>
-            <property name="shadow_type">in</property>
+            <property name="margin_left">5</property>
+            <property name="margin_right">5</property>
+            <property name="margin_top">5</property>
+            <property name="margin_bottom">5</property>
+            <property name="hexpand">False</property>
+            <property name="column_spacing">2</property>
+            <property name="row_homogeneous">True</property>
+            <property name="column_homogeneous">True</property>
+            <property name="baseline_row">4</property>
             <child>
-              <object class="GtkAlignment">
+              <object class="GtkBox">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="left_padding">12</property>
+                <property name="margin_left">11</property>
+                <property name="margin_right">11</property>
+                <property name="margin_top">11</property>
+                <property name="margin_bottom">11</property>
+                <property name="orientation">vertical</property>
+                <property name="spacing">11</property>
+                <property name="baseline_position">top</property>
                 <child>
-                  <object class="GtkLabel">
+                  <object class="GtkFrame" id="Frankenlogos1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Generates "el frankenlogos" 
+                    <property name="margin_bottom">11</property>
+                    <property name="label_xalign">0</property>
+                    <property name="shadow_type">in</property>
+                    <child>
+                      <object class="GtkAlignment">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="left_padding">12</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="label" translatable="yes">Generates "el frankenlogos" 
 aka "the jigsaw puzzle effect"</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="label">
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Generate the Frankenlogos</property>
+                      </object>
+                    </child>
                   </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="frankenlogos1">
+                    <property name="label" translatable="yes">Frankenlogos</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="margin_bottom">11</property>
+                    <signal name="clicked" handler="on_frankenlogos_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFrame" id="Colored (no logo)1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_bottom">11</property>
+                    <property name="label_xalign">0</property>
+                    <property name="shadow_type">in</property>
+                    <child>
+                      <object class="GtkAlignment">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="left_padding">12</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="label" translatable="yes">Generates every colored triangle 
+without the completed logo</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="label">
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Generate colors w/out logo</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="colored_nologo1">
+                    <property name="label" translatable="yes">Colored (no logo)</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="margin_bottom">11</property>
+                    <signal name="clicked" handler="on_colored_nologo_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFrame" id="All1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_bottom">11</property>
+                    <property name="label_xalign">0</property>
+                    <property name="shadow_type">in</property>
+                    <child>
+                      <object class="GtkAlignment">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="left_padding">12</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="label" translatable="yes">Generates every damn thing possible
+</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="label">
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Generate All</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="all1">
+                    <property name="label" translatable="yes">All</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="margin_bottom">11</property>
+                    <signal name="clicked" handler="on_all_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">5</property>
+                  </packing>
                 </child>
               </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
             </child>
-            <child type="label">
-              <object class="GtkLabel">
+            <child>
+              <object class="GtkBox">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Generate the Frankenlogos</property>
+                <property name="margin_left">11</property>
+                <property name="margin_right">11</property>
+                <property name="margin_top">11</property>
+                <property name="margin_bottom">11</property>
+                <property name="orientation">vertical</property>
+                <property name="spacing">11</property>
+                <child>
+                  <object class="GtkFrame" id="Outlined (no logo)1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_bottom">11</property>
+                    <property name="label_xalign">0</property>
+                    <property name="shadow_type">in</property>
+                    <child>
+                      <object class="GtkAlignment">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="left_padding">12</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="label" translatable="yes">Generates every outline minus the 
+completed logo</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="label">
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Generate all outlines w/out logo</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="outlined_nologo1">
+                    <property name="label" translatable="yes">Outlined (no logo)</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="margin_bottom">11</property>
+                    <signal name="clicked" handler="on_outlined_nologo_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFrame" id="Outlined (all)1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_bottom">11</property>
+                    <property name="label_xalign">0</property>
+                    <property name="shadow_type">in</property>
+                    <child>
+                      <object class="GtkAlignment">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="left_padding">12</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="label" translatable="yes">Generates every outlined triangle 
+with the completed logo</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="label">
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Generate all outlines</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="outlined_all1">
+                    <property name="label" translatable="yes">Outlined (all)</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="margin_bottom">11</property>
+                    <signal name="clicked" handler="on_outlined_all_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFrame" id="All colors1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_bottom">11</property>
+                    <property name="label_xalign">0</property>
+                    <property name="shadow_type">in</property>
+                    <child>
+                      <object class="GtkAlignment">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="left_padding">12</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="label" translatable="yes">Generates every colored triangle 
+with the completed logo</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="label">
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Generate all colors</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="all_colors1">
+                    <property name="label" translatable="yes">All colors</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="on_all_colors_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">5</property>
+                  </packing>
+                </child>
               </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
+              </packing>
             </child>
           </object>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Logos</property>
+          </object>
           <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">0</property>
+            <property name="menu_label">Logos</property>
+            <property name="tab_expand">True</property>
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="frankenlogos">
-            <property name="label" translatable="yes">Frankenlogos</property>
+          <object class="GtkBox">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="margin_bottom">11</property>
-            <signal name="clicked" handler="on_frankenlogos_clicked" swapped="no"/>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkFrame">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_left">11</property>
+                <property name="margin_right">11</property>
+                <property name="margin_top">11</property>
+                <property name="margin_bottom">11</property>
+                <property name="label_xalign">0</property>
+                <property name="shadow_type">in</property>
+                <child>
+                  <object class="GtkAlignment">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="left_padding">12</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">This section will be completed when the first Cairo-based icon is incorporated.
+
+At the time this is being written, the codebase needs refactoring before 
+additional progress can be made</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child type="label">
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Under construction</property>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFrame">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_left">11</property>
+                <property name="margin_right">11</property>
+                <property name="margin_top">11</property>
+                <property name="margin_bottom">11</property>
+                <property name="label_xalign">0</property>
+                <property name="shadow_type">in</property>
+                <child>
+                  <object class="GtkAlignment">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="left_padding">12</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="label" translatable="yes">Want to make things move quicker (at least for yourself)?</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLinkButton">
+                            <property name="label" translatable="yes">button</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                            <property name="has_tooltip">True</property>
+                            <property name="relief">half</property>
+                            <property name="uri">https://github.com/Christoffen-Corporation/asset-generator</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child type="label">
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Fork Me On GitHub!</property>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
           </object>
           <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
             <property name="position">1</property>
           </packing>
         </child>
-        <child>
-          <object class="GtkFrame" id="Colored (no logo)">
+        <child type="tab">
+          <object class="GtkLabel">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="margin_bottom">11</property>
-            <property name="label_xalign">0</property>
-            <property name="shadow_type">in</property>
+            <property name="margin_left">10</property>
+            <property name="margin_right">10</property>
+            <property name="label" translatable="yes">Icons</property>
+          </object>
+          <packing>
+            <property name="position">1</property>
+            <property name="tab_fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
             <child>
-              <object class="GtkAlignment">
+              <object class="GtkImage">
+                <property name="width_request">221</property>
+                <property name="height_request">310</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="left_padding">12</property>
-                <child>
-                  <object class="GtkLabel">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Generates every colored triangle 
-without the completed logo</property>
-                  </object>
-                </child>
+                <property name="pixbuf">crstfn-hybrid1.png</property>
               </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
             </child>
-            <child type="label">
+            <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Generate colors w/out logo</property>
+                <property name="label" translatable="yes">Christoffen Assets</property>
+                <attributes>
+                  <attribute name="style" value="normal"/>
+                  <attribute name="weight" value="ultrabold"/>
+                  <attribute name="variant" value="normal"/>
+                  <attribute name="scale" value="2"/>
+                </attributes>
               </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Version 3 BETA</property>
+                <attributes>
+                  <attribute name="scale" value="1"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
             </child>
           </object>
           <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
             <property name="position">2</property>
           </packing>
         </child>
-        <child>
-          <object class="GtkButton" id="colored_nologo">
-            <property name="label" translatable="yes">Colored (no logo)</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="margin_bottom">11</property>
-            <signal name="clicked" handler="on_colored_nologo_clicked" swapped="no"/>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">3</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkFrame" id="All">
+        <child type="tab">
+          <object class="GtkLabel">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="margin_bottom">11</property>
-            <property name="label_xalign">0</property>
-            <property name="shadow_type">in</property>
-            <child>
-              <object class="GtkAlignment">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="left_padding">12</property>
-                <child>
-                  <object class="GtkLabel">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Generates every damn thing possible</property>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child type="label">
-              <object class="GtkLabel">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Generate All</property>
-              </object>
-            </child>
+            <property name="label" translatable="yes">About</property>
           </object>
           <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">4</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkButton" id="all">
-            <property name="label" translatable="yes">All</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="margin_bottom">11</property>
-            <signal name="clicked" handler="on_all_clicked" swapped="no"/>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">5</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkFrame" id="Outlined (no logo)">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">11</property>
-            <property name="label_xalign">0</property>
-            <property name="shadow_type">in</property>
-            <child>
-              <object class="GtkAlignment">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="left_padding">12</property>
-                <child>
-                  <object class="GtkLabel">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Generates every outline minus the 
-completed logo</property>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child type="label">
-              <object class="GtkLabel">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Generate all outlines w/out logo</property>
-              </object>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">6</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkButton" id="outlined_nologo">
-            <property name="label" translatable="yes">Outlined (no logo)</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <signal name="clicked" handler="on_outlined_nologo_clicked" swapped="no"/>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">7</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkFrame" id="Outlined (all)">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">11</property>
-            <property name="label_xalign">0</property>
-            <property name="shadow_type">in</property>
-            <child>
-              <object class="GtkAlignment">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="left_padding">12</property>
-                <child>
-                  <object class="GtkLabel">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Generates every outlined triangle 
-with the completed logo</property>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child type="label">
-              <object class="GtkLabel">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Generate all outlines</property>
-              </object>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">8</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkButton" id="outlined_all">
-            <property name="label" translatable="yes">Outlined (all)</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="margin_bottom">11</property>
-            <signal name="clicked" handler="on_outlined_all_clicked" swapped="no"/>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">9</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkFrame" id="All colors">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">11</property>
-            <property name="label_xalign">0</property>
-            <property name="shadow_type">in</property>
-            <child>
-              <object class="GtkAlignment">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="left_padding">12</property>
-                <child>
-                  <object class="GtkLabel">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Generates every colored triangle 
-with the completed logo</property>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child type="label">
-              <object class="GtkLabel">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Generate all colors</property>
-              </object>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">10</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkButton" id="all_colors">
-            <property name="label" translatable="yes">All colors</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <signal name="clicked" handler="on_all_colors_clicked" swapped="no"/>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">15</property>
+            <property name="position">2</property>
+            <property name="tab_fill">False</property>
           </packing>
         </child>
       </object>

@@ -1,7 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 AC_PREREQ([2.69])
-AC_INIT([asset-generator], [2.0.4], [gage@christoffen.com])
+AC_INIT([asset-generator], [3.0-beta1], [gage@christoffen.com])
 AM_INIT_AUTOMAKE([subdir-objects])
 AC_CONFIG_SRCDIR([src])
 AC_CONFIG_HEADERS([config.h])
