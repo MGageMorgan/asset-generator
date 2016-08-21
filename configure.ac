@@ -9,7 +9,6 @@ AC_CONFIG_HEADERS([config.h])
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_INSTALL
-cp src/logo/main_window.ui ../..
 # Checks for libraries.
 
 # Checks for header files.

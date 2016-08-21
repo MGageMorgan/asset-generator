@@ -263,7 +263,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-__top_builddir__logo_SOURCES = main.c options.c ../api/colored_triangle.c ../api/join_triangles.c ../api/outlined_triangle.c ../api/include.h main_window.ui
+__top_builddir__logo_SOURCES = main.c options.c ../api/colored_triangle.c ../api/join_triangles.c ../api/outlined_triangle.c ../api/include.h ../api/main_window.ui
 __top_builddir__logo_CFLAGS = `pkg-config --cflags gtk+-3.0 cairo` -export-dynamic
 __top_builddir__logo_LDFLAGS = `pkg-config --libs gtk+-3.0 cairo` 
 all: all-am

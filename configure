@@ -3439,7 +3439,6 @@ fi
 
 
 
-cp src/logo/main_window.ui ../..
 # Checks for libraries.
 
 # Checks for header files.
