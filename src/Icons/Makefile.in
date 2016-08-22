@@ -95,8 +95,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = $(top_builddir)/icons$(EXEEXT)
-subdir = src/icons
+bin_PROGRAMS = $(top_builddir)/bin/Icons$(EXEEXT)
+subdir = src/Icons
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -109,15 +109,17 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
-am___top_builddir__icons_OBJECTS =  \
-	__top_builddir__icons-main.$(OBJEXT) \
-	../api/__top_builddir__icons-join_icon_chat.$(OBJEXT) \
-	../api/__top_builddir__icons-rhombus.$(OBJEXT) \
-	../api/__top_builddir__icons-polygon.$(OBJEXT)
-__top_builddir__icons_OBJECTS = $(am___top_builddir__icons_OBJECTS)
-__top_builddir__icons_LDADD = $(LDADD)
-__top_builddir__icons_LINK = $(CCLD) $(__top_builddir__icons_CFLAGS) \
-	$(CFLAGS) $(__top_builddir__icons_LDFLAGS) $(LDFLAGS) -o $@
+am___top_builddir__bin_Icons_OBJECTS =  \
+	__top_builddir__bin_Icons-main.$(OBJEXT) \
+	../api/__top_builddir__bin_Icons-join_icon_chat.$(OBJEXT) \
+	../api/__top_builddir__bin_Icons-rhombus.$(OBJEXT) \
+	../api/__top_builddir__bin_Icons-polygon.$(OBJEXT)
+__top_builddir__bin_Icons_OBJECTS =  \
+	$(am___top_builddir__bin_Icons_OBJECTS)
+__top_builddir__bin_Icons_LDADD = $(LDADD)
+__top_builddir__bin_Icons_LINK = $(CCLD) \
+	$(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) \
+	$(__top_builddir__bin_Icons_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -150,8 +152,8 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(__top_builddir__icons_SOURCES)
-DIST_SOURCES = $(__top_builddir__icons_SOURCES)
+SOURCES = $(__top_builddir__bin_Icons_SOURCES)
+DIST_SOURCES = $(__top_builddir__bin_Icons_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -263,9 +265,9 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-__top_builddir__icons_SOURCES = main.c ../api/join_icon_chat.c ../api/rhombus.c ../api/polygon.c ../api/include.h 
-__top_builddir__icons_CFLAGS = `pkg-config --cflags cairo` 
-__top_builddir__icons_LDFLAGS = `pkg-config --libs cairo` 
+__top_builddir__bin_Icons_SOURCES = main.c ../api/join_icon_chat.c ../api/rhombus.c ../api/polygon.c ../api/include.h 
+__top_builddir__bin_Icons_CFLAGS = `pkg-config --cflags cairo` 
+__top_builddir__bin_Icons_LDFLAGS = `pkg-config --libs cairo` 
 all: all-am
 
 .SUFFIXES:
@@ -279,9 +281,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu src/icons/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu src/Icons/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu src/icons/Makefile
+	  $(AUTOMAKE) --gnu src/Icons/Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
 	  *config.status*) \
@@ -347,19 +349,19 @@ clean-binPROGRAMS:
 ../api/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) ../api/$(DEPDIR)
 	@: > ../api/$(DEPDIR)/$(am__dirstamp)
-../api/__top_builddir__icons-join_icon_chat.$(OBJEXT):  \
+../api/__top_builddir__bin_Icons-join_icon_chat.$(OBJEXT):  \
 	../api/$(am__dirstamp) ../api/$(DEPDIR)/$(am__dirstamp)
-../api/__top_builddir__icons-rhombus.$(OBJEXT):  \
+../api/__top_builddir__bin_Icons-rhombus.$(OBJEXT):  \
 	../api/$(am__dirstamp) ../api/$(DEPDIR)/$(am__dirstamp)
-../api/__top_builddir__icons-polygon.$(OBJEXT):  \
+../api/__top_builddir__bin_Icons-polygon.$(OBJEXT):  \
 	../api/$(am__dirstamp) ../api/$(DEPDIR)/$(am__dirstamp)
-$(top_builddir)/$(am__dirstamp):
-	@$(MKDIR_P) $(top_builddir)
-	@: > $(top_builddir)/$(am__dirstamp)
+$(top_builddir)/bin/$(am__dirstamp):
+	@$(MKDIR_P) $(top_builddir)/bin
+	@: > $(top_builddir)/bin/$(am__dirstamp)
 
-$(top_builddir)/icons$(EXEEXT): $(__top_builddir__icons_OBJECTS) $(__top_builddir__icons_DEPENDENCIES) $(EXTRA___top_builddir__icons_DEPENDENCIES) $(top_builddir)/$(am__dirstamp)
-	@rm -f $(top_builddir)/icons$(EXEEXT)
-	$(AM_V_CCLD)$(__top_builddir__icons_LINK) $(__top_builddir__icons_OBJECTS) $(__top_builddir__icons_LDADD) $(LIBS)
+$(top_builddir)/bin/Icons$(EXEEXT): $(__top_builddir__bin_Icons_OBJECTS) $(__top_builddir__bin_Icons_DEPENDENCIES) $(EXTRA___top_builddir__bin_Icons_DEPENDENCIES) $(top_builddir)/bin/$(am__dirstamp)
+	@rm -f $(top_builddir)/bin/Icons$(EXEEXT)
+	$(AM_V_CCLD)$(__top_builddir__bin_Icons_LINK) $(__top_builddir__bin_Icons_OBJECTS) $(__top_builddir__bin_Icons_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -368,10 +370,10 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@../api/$(DEPDIR)/__top_builddir__icons-join_icon_chat.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@../api/$(DEPDIR)/__top_builddir__icons-polygon.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@../api/$(DEPDIR)/__top_builddir__icons-rhombus.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__icons-main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@../api/$(DEPDIR)/__top_builddir__bin_Icons-join_icon_chat.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@../api/$(DEPDIR)/__top_builddir__bin_Icons-polygon.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@../api/$(DEPDIR)/__top_builddir__bin_Icons-rhombus.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__bin_Icons-main.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -389,61 +391,61 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
-__top_builddir__icons-main.o: main.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -MT __top_builddir__icons-main.o -MD -MP -MF $(DEPDIR)/__top_builddir__icons-main.Tpo -c -o __top_builddir__icons-main.o `test -f 'main.c' || echo '$(srcdir)/'`main.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/__top_builddir__icons-main.Tpo $(DEPDIR)/__top_builddir__icons-main.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='main.c' object='__top_builddir__icons-main.o' libtool=no @AMDEPBACKSLASH@
+__top_builddir__bin_Icons-main.o: main.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -MT __top_builddir__bin_Icons-main.o -MD -MP -MF $(DEPDIR)/__top_builddir__bin_Icons-main.Tpo -c -o __top_builddir__bin_Icons-main.o `test -f 'main.c' || echo '$(srcdir)/'`main.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/__top_builddir__bin_Icons-main.Tpo $(DEPDIR)/__top_builddir__bin_Icons-main.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='main.c' object='__top_builddir__bin_Icons-main.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -c -o __top_builddir__icons-main.o `test -f 'main.c' || echo '$(srcdir)/'`main.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -c -o __top_builddir__bin_Icons-main.o `test -f 'main.c' || echo '$(srcdir)/'`main.c
 
-__top_builddir__icons-main.obj: main.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -MT __top_builddir__icons-main.obj -MD -MP -MF $(DEPDIR)/__top_builddir__icons-main.Tpo -c -o __top_builddir__icons-main.obj `if test -f 'main.c'; then $(CYGPATH_W) 'main.c'; else $(CYGPATH_W) '$(srcdir)/main.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/__top_builddir__icons-main.Tpo $(DEPDIR)/__top_builddir__icons-main.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='main.c' object='__top_builddir__icons-main.obj' libtool=no @AMDEPBACKSLASH@
+__top_builddir__bin_Icons-main.obj: main.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -MT __top_builddir__bin_Icons-main.obj -MD -MP -MF $(DEPDIR)/__top_builddir__bin_Icons-main.Tpo -c -o __top_builddir__bin_Icons-main.obj `if test -f 'main.c'; then $(CYGPATH_W) 'main.c'; else $(CYGPATH_W) '$(srcdir)/main.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/__top_builddir__bin_Icons-main.Tpo $(DEPDIR)/__top_builddir__bin_Icons-main.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='main.c' object='__top_builddir__bin_Icons-main.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -c -o __top_builddir__icons-main.obj `if test -f 'main.c'; then $(CYGPATH_W) 'main.c'; else $(CYGPATH_W) '$(srcdir)/main.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -c -o __top_builddir__bin_Icons-main.obj `if test -f 'main.c'; then $(CYGPATH_W) 'main.c'; else $(CYGPATH_W) '$(srcdir)/main.c'; fi`
 
-../api/__top_builddir__icons-join_icon_chat.o: ../api/join_icon_chat.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__icons-join_icon_chat.o -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__icons-join_icon_chat.Tpo -c -o ../api/__top_builddir__icons-join_icon_chat.o `test -f '../api/join_icon_chat.c' || echo '$(srcdir)/'`../api/join_icon_chat.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__icons-join_icon_chat.Tpo ../api/$(DEPDIR)/__top_builddir__icons-join_icon_chat.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/join_icon_chat.c' object='../api/__top_builddir__icons-join_icon_chat.o' libtool=no @AMDEPBACKSLASH@
+../api/__top_builddir__bin_Icons-join_icon_chat.o: ../api/join_icon_chat.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__bin_Icons-join_icon_chat.o -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__bin_Icons-join_icon_chat.Tpo -c -o ../api/__top_builddir__bin_Icons-join_icon_chat.o `test -f '../api/join_icon_chat.c' || echo '$(srcdir)/'`../api/join_icon_chat.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__bin_Icons-join_icon_chat.Tpo ../api/$(DEPDIR)/__top_builddir__bin_Icons-join_icon_chat.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/join_icon_chat.c' object='../api/__top_builddir__bin_Icons-join_icon_chat.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__icons-join_icon_chat.o `test -f '../api/join_icon_chat.c' || echo '$(srcdir)/'`../api/join_icon_chat.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__bin_Icons-join_icon_chat.o `test -f '../api/join_icon_chat.c' || echo '$(srcdir)/'`../api/join_icon_chat.c
 
-../api/__top_builddir__icons-join_icon_chat.obj: ../api/join_icon_chat.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__icons-join_icon_chat.obj -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__icons-join_icon_chat.Tpo -c -o ../api/__top_builddir__icons-join_icon_chat.obj `if test -f '../api/join_icon_chat.c'; then $(CYGPATH_W) '../api/join_icon_chat.c'; else $(CYGPATH_W) '$(srcdir)/../api/join_icon_chat.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__icons-join_icon_chat.Tpo ../api/$(DEPDIR)/__top_builddir__icons-join_icon_chat.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/join_icon_chat.c' object='../api/__top_builddir__icons-join_icon_chat.obj' libtool=no @AMDEPBACKSLASH@
+../api/__top_builddir__bin_Icons-join_icon_chat.obj: ../api/join_icon_chat.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__bin_Icons-join_icon_chat.obj -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__bin_Icons-join_icon_chat.Tpo -c -o ../api/__top_builddir__bin_Icons-join_icon_chat.obj `if test -f '../api/join_icon_chat.c'; then $(CYGPATH_W) '../api/join_icon_chat.c'; else $(CYGPATH_W) '$(srcdir)/../api/join_icon_chat.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__bin_Icons-join_icon_chat.Tpo ../api/$(DEPDIR)/__top_builddir__bin_Icons-join_icon_chat.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/join_icon_chat.c' object='../api/__top_builddir__bin_Icons-join_icon_chat.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__icons-join_icon_chat.obj `if test -f '../api/join_icon_chat.c'; then $(CYGPATH_W) '../api/join_icon_chat.c'; else $(CYGPATH_W) '$(srcdir)/../api/join_icon_chat.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__bin_Icons-join_icon_chat.obj `if test -f '../api/join_icon_chat.c'; then $(CYGPATH_W) '../api/join_icon_chat.c'; else $(CYGPATH_W) '$(srcdir)/../api/join_icon_chat.c'; fi`
 
-../api/__top_builddir__icons-rhombus.o: ../api/rhombus.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__icons-rhombus.o -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__icons-rhombus.Tpo -c -o ../api/__top_builddir__icons-rhombus.o `test -f '../api/rhombus.c' || echo '$(srcdir)/'`../api/rhombus.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__icons-rhombus.Tpo ../api/$(DEPDIR)/__top_builddir__icons-rhombus.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/rhombus.c' object='../api/__top_builddir__icons-rhombus.o' libtool=no @AMDEPBACKSLASH@
+../api/__top_builddir__bin_Icons-rhombus.o: ../api/rhombus.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__bin_Icons-rhombus.o -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__bin_Icons-rhombus.Tpo -c -o ../api/__top_builddir__bin_Icons-rhombus.o `test -f '../api/rhombus.c' || echo '$(srcdir)/'`../api/rhombus.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__bin_Icons-rhombus.Tpo ../api/$(DEPDIR)/__top_builddir__bin_Icons-rhombus.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/rhombus.c' object='../api/__top_builddir__bin_Icons-rhombus.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__icons-rhombus.o `test -f '../api/rhombus.c' || echo '$(srcdir)/'`../api/rhombus.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__bin_Icons-rhombus.o `test -f '../api/rhombus.c' || echo '$(srcdir)/'`../api/rhombus.c
 
-../api/__top_builddir__icons-rhombus.obj: ../api/rhombus.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__icons-rhombus.obj -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__icons-rhombus.Tpo -c -o ../api/__top_builddir__icons-rhombus.obj `if test -f '../api/rhombus.c'; then $(CYGPATH_W) '../api/rhombus.c'; else $(CYGPATH_W) '$(srcdir)/../api/rhombus.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__icons-rhombus.Tpo ../api/$(DEPDIR)/__top_builddir__icons-rhombus.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/rhombus.c' object='../api/__top_builddir__icons-rhombus.obj' libtool=no @AMDEPBACKSLASH@
+../api/__top_builddir__bin_Icons-rhombus.obj: ../api/rhombus.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__bin_Icons-rhombus.obj -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__bin_Icons-rhombus.Tpo -c -o ../api/__top_builddir__bin_Icons-rhombus.obj `if test -f '../api/rhombus.c'; then $(CYGPATH_W) '../api/rhombus.c'; else $(CYGPATH_W) '$(srcdir)/../api/rhombus.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__bin_Icons-rhombus.Tpo ../api/$(DEPDIR)/__top_builddir__bin_Icons-rhombus.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/rhombus.c' object='../api/__top_builddir__bin_Icons-rhombus.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__icons-rhombus.obj `if test -f '../api/rhombus.c'; then $(CYGPATH_W) '../api/rhombus.c'; else $(CYGPATH_W) '$(srcdir)/../api/rhombus.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__bin_Icons-rhombus.obj `if test -f '../api/rhombus.c'; then $(CYGPATH_W) '../api/rhombus.c'; else $(CYGPATH_W) '$(srcdir)/../api/rhombus.c'; fi`
 
-../api/__top_builddir__icons-polygon.o: ../api/polygon.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__icons-polygon.o -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__icons-polygon.Tpo -c -o ../api/__top_builddir__icons-polygon.o `test -f '../api/polygon.c' || echo '$(srcdir)/'`../api/polygon.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__icons-polygon.Tpo ../api/$(DEPDIR)/__top_builddir__icons-polygon.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/polygon.c' object='../api/__top_builddir__icons-polygon.o' libtool=no @AMDEPBACKSLASH@
+../api/__top_builddir__bin_Icons-polygon.o: ../api/polygon.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__bin_Icons-polygon.o -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__bin_Icons-polygon.Tpo -c -o ../api/__top_builddir__bin_Icons-polygon.o `test -f '../api/polygon.c' || echo '$(srcdir)/'`../api/polygon.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__bin_Icons-polygon.Tpo ../api/$(DEPDIR)/__top_builddir__bin_Icons-polygon.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/polygon.c' object='../api/__top_builddir__bin_Icons-polygon.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__icons-polygon.o `test -f '../api/polygon.c' || echo '$(srcdir)/'`../api/polygon.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__bin_Icons-polygon.o `test -f '../api/polygon.c' || echo '$(srcdir)/'`../api/polygon.c
 
-../api/__top_builddir__icons-polygon.obj: ../api/polygon.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__icons-polygon.obj -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__icons-polygon.Tpo -c -o ../api/__top_builddir__icons-polygon.obj `if test -f '../api/polygon.c'; then $(CYGPATH_W) '../api/polygon.c'; else $(CYGPATH_W) '$(srcdir)/../api/polygon.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__icons-polygon.Tpo ../api/$(DEPDIR)/__top_builddir__icons-polygon.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/polygon.c' object='../api/__top_builddir__icons-polygon.obj' libtool=no @AMDEPBACKSLASH@
+../api/__top_builddir__bin_Icons-polygon.obj: ../api/polygon.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__bin_Icons-polygon.obj -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__bin_Icons-polygon.Tpo -c -o ../api/__top_builddir__bin_Icons-polygon.obj `if test -f '../api/polygon.c'; then $(CYGPATH_W) '../api/polygon.c'; else $(CYGPATH_W) '$(srcdir)/../api/polygon.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__bin_Icons-polygon.Tpo ../api/$(DEPDIR)/__top_builddir__bin_Icons-polygon.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/polygon.c' object='../api/__top_builddir__bin_Icons-polygon.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__icons_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__icons-polygon.obj `if test -f '../api/polygon.c'; then $(CYGPATH_W) '../api/polygon.c'; else $(CYGPATH_W) '$(srcdir)/../api/polygon.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Icons_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__bin_Icons-polygon.obj `if test -f '../api/polygon.c'; then $(CYGPATH_W) '../api/polygon.c'; else $(CYGPATH_W) '$(srcdir)/../api/polygon.c'; fi`
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
@@ -562,7 +564,7 @@ distclean-generic:
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
 	-rm -f ../api/$(DEPDIR)/$(am__dirstamp)
 	-rm -f ../api/$(am__dirstamp)
-	-test -z "$(top_builddir)/$(am__dirstamp)" || rm -f $(top_builddir)/$(am__dirstamp)
+	-test -z "$(top_builddir)/bin/$(am__dirstamp)" || rm -f $(top_builddir)/bin/$(am__dirstamp)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"

@@ -7,9 +7,9 @@
 # Started from the bottom now we're here
 # Started from the bottom now the whole team fucking here
 
-bin_PROGRAMS = $(top_builddir)/icons
-__top_builddir__icons_SOURCES = main.c ../api/join_icon_chat.c ../api/rhombus.c ../api/polygon.c ../api/include.h 
-__top_builddir__icons_CFLAGS = `pkg-config --cflags cairo` 
-__top_builddir__icons_LDFLAGS = `pkg-config --libs cairo` 
+bin_PROGRAMS = $(top_builddir)/bin/Icons
+__top_builddir__bin_Icons_SOURCES = main.c ../api/join_icon_chat.c ../api/rhombus.c ../api/polygon.c ../api/include.h 
+__top_builddir__bin_Icons_CFLAGS = `pkg-config --cflags cairo` 
+__top_builddir__bin_Icons_LDFLAGS = `pkg-config --libs cairo` 
 
 
