@@ -1,5 +1,5 @@
 #include <cairo.h>
-#include "../api/include.h"
+#include "../API/include.h"
 
 int main(void) {
 	rhombus(256, 256, 0.01, 0.5, 0.99, 0.8, 3.0, 4.0, 253.0, 4.0, 253.0, 195.0, 3.0, 195.0, "box1.png");

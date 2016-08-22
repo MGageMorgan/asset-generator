@@ -112,9 +112,9 @@ am__dirstamp = $(am__leading_dot)dirstamp
 am___top_builddir__bin_Assets_OBJECTS =  \
 	__top_builddir__bin_Assets-main.$(OBJEXT) \
 	__top_builddir__bin_Assets-options.$(OBJEXT) \
-	../api/__top_builddir__bin_Assets-colored_triangle.$(OBJEXT) \
-	../api/__top_builddir__bin_Assets-join_triangles.$(OBJEXT) \
-	../api/__top_builddir__bin_Assets-outlined_triangle.$(OBJEXT)
+	../API/__top_builddir__bin_Assets-colored_triangle.$(OBJEXT) \
+	../API/__top_builddir__bin_Assets-join_triangles.$(OBJEXT) \
+	../API/__top_builddir__bin_Assets-outlined_triangle.$(OBJEXT)
 __top_builddir__bin_Assets_OBJECTS =  \
 	$(am___top_builddir__bin_Assets_OBJECTS)
 __top_builddir__bin_Assets_LDADD = $(LDADD)
@@ -266,7 +266,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-__top_builddir__bin_Assets_SOURCES = main.c options.c ../api/colored_triangle.c ../api/join_triangles.c ../api/outlined_triangle.c ../api/include.h ../api/main_window.ui ../api/crstfn-hybrid1.png
+__top_builddir__bin_Assets_SOURCES = main.c options.c ../API/colored_triangle.c ../API/join_triangles.c ../API/outlined_triangle.c ../API/include.h ../API/main_window.ui ../API/crstfn-hybrid1.png
 __top_builddir__bin_Assets_CFLAGS = `pkg-config --cflags gtk+-3.0 cairo` -export-dynamic
 __top_builddir__bin_Assets_LDFLAGS = `pkg-config --libs gtk+-3.0 cairo` 
 all: all-am
@@ -344,18 +344,18 @@ uninstall-binPROGRAMS:
 
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
-../api/$(am__dirstamp):
-	@$(MKDIR_P) ../api
-	@: > ../api/$(am__dirstamp)
-../api/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) ../api/$(DEPDIR)
-	@: > ../api/$(DEPDIR)/$(am__dirstamp)
-../api/__top_builddir__bin_Assets-colored_triangle.$(OBJEXT):  \
-	../api/$(am__dirstamp) ../api/$(DEPDIR)/$(am__dirstamp)
-../api/__top_builddir__bin_Assets-join_triangles.$(OBJEXT):  \
-	../api/$(am__dirstamp) ../api/$(DEPDIR)/$(am__dirstamp)
-../api/__top_builddir__bin_Assets-outlined_triangle.$(OBJEXT):  \
-	../api/$(am__dirstamp) ../api/$(DEPDIR)/$(am__dirstamp)
+../API/$(am__dirstamp):
+	@$(MKDIR_P) ../API
+	@: > ../API/$(am__dirstamp)
+../API/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) ../API/$(DEPDIR)
+	@: > ../API/$(DEPDIR)/$(am__dirstamp)
+../API/__top_builddir__bin_Assets-colored_triangle.$(OBJEXT):  \
+	../API/$(am__dirstamp) ../API/$(DEPDIR)/$(am__dirstamp)
+../API/__top_builddir__bin_Assets-join_triangles.$(OBJEXT):  \
+	../API/$(am__dirstamp) ../API/$(DEPDIR)/$(am__dirstamp)
+../API/__top_builddir__bin_Assets-outlined_triangle.$(OBJEXT):  \
+	../API/$(am__dirstamp) ../API/$(DEPDIR)/$(am__dirstamp)
 $(top_builddir)/bin/$(am__dirstamp):
 	@$(MKDIR_P) $(top_builddir)/bin
 	@: > $(top_builddir)/bin/$(am__dirstamp)
@@ -366,14 +366,14 @@ $(top_builddir)/bin/Assets$(EXEEXT): $(__top_builddir__bin_Assets_OBJECTS) $(__t
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
-	-rm -f ../api/*.$(OBJEXT)
+	-rm -f ../API/*.$(OBJEXT)
 
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@../api/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@../api/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@../api/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@../API/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@../API/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@../API/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__bin_Assets-main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__bin_Assets-options.Po@am__quote@
 
@@ -421,47 +421,47 @@ __top_builddir__bin_Assets-options.obj: options.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o __top_builddir__bin_Assets-options.obj `if test -f 'options.c'; then $(CYGPATH_W) 'options.c'; else $(CYGPATH_W) '$(srcdir)/options.c'; fi`
 
-../api/__top_builddir__bin_Assets-colored_triangle.o: ../api/colored_triangle.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__bin_Assets-colored_triangle.o -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Tpo -c -o ../api/__top_builddir__bin_Assets-colored_triangle.o `test -f '../api/colored_triangle.c' || echo '$(srcdir)/'`../api/colored_triangle.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Tpo ../api/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/colored_triangle.c' object='../api/__top_builddir__bin_Assets-colored_triangle.o' libtool=no @AMDEPBACKSLASH@
+../API/__top_builddir__bin_Assets-colored_triangle.o: ../API/colored_triangle.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/__top_builddir__bin_Assets-colored_triangle.o -MD -MP -MF ../API/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Tpo -c -o ../API/__top_builddir__bin_Assets-colored_triangle.o `test -f '../API/colored_triangle.c' || echo '$(srcdir)/'`../API/colored_triangle.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../API/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Tpo ../API/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/colored_triangle.c' object='../API/__top_builddir__bin_Assets-colored_triangle.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__bin_Assets-colored_triangle.o `test -f '../api/colored_triangle.c' || echo '$(srcdir)/'`../api/colored_triangle.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/__top_builddir__bin_Assets-colored_triangle.o `test -f '../API/colored_triangle.c' || echo '$(srcdir)/'`../API/colored_triangle.c
 
-../api/__top_builddir__bin_Assets-colored_triangle.obj: ../api/colored_triangle.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__bin_Assets-colored_triangle.obj -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Tpo -c -o ../api/__top_builddir__bin_Assets-colored_triangle.obj `if test -f '../api/colored_triangle.c'; then $(CYGPATH_W) '../api/colored_triangle.c'; else $(CYGPATH_W) '$(srcdir)/../api/colored_triangle.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Tpo ../api/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/colored_triangle.c' object='../api/__top_builddir__bin_Assets-colored_triangle.obj' libtool=no @AMDEPBACKSLASH@
+../API/__top_builddir__bin_Assets-colored_triangle.obj: ../API/colored_triangle.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/__top_builddir__bin_Assets-colored_triangle.obj -MD -MP -MF ../API/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Tpo -c -o ../API/__top_builddir__bin_Assets-colored_triangle.obj `if test -f '../API/colored_triangle.c'; then $(CYGPATH_W) '../API/colored_triangle.c'; else $(CYGPATH_W) '$(srcdir)/../API/colored_triangle.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../API/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Tpo ../API/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/colored_triangle.c' object='../API/__top_builddir__bin_Assets-colored_triangle.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__bin_Assets-colored_triangle.obj `if test -f '../api/colored_triangle.c'; then $(CYGPATH_W) '../api/colored_triangle.c'; else $(CYGPATH_W) '$(srcdir)/../api/colored_triangle.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/__top_builddir__bin_Assets-colored_triangle.obj `if test -f '../API/colored_triangle.c'; then $(CYGPATH_W) '../API/colored_triangle.c'; else $(CYGPATH_W) '$(srcdir)/../API/colored_triangle.c'; fi`
 
-../api/__top_builddir__bin_Assets-join_triangles.o: ../api/join_triangles.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__bin_Assets-join_triangles.o -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Tpo -c -o ../api/__top_builddir__bin_Assets-join_triangles.o `test -f '../api/join_triangles.c' || echo '$(srcdir)/'`../api/join_triangles.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Tpo ../api/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/join_triangles.c' object='../api/__top_builddir__bin_Assets-join_triangles.o' libtool=no @AMDEPBACKSLASH@
+../API/__top_builddir__bin_Assets-join_triangles.o: ../API/join_triangles.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/__top_builddir__bin_Assets-join_triangles.o -MD -MP -MF ../API/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Tpo -c -o ../API/__top_builddir__bin_Assets-join_triangles.o `test -f '../API/join_triangles.c' || echo '$(srcdir)/'`../API/join_triangles.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../API/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Tpo ../API/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/join_triangles.c' object='../API/__top_builddir__bin_Assets-join_triangles.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__bin_Assets-join_triangles.o `test -f '../api/join_triangles.c' || echo '$(srcdir)/'`../api/join_triangles.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/__top_builddir__bin_Assets-join_triangles.o `test -f '../API/join_triangles.c' || echo '$(srcdir)/'`../API/join_triangles.c
 
-../api/__top_builddir__bin_Assets-join_triangles.obj: ../api/join_triangles.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__bin_Assets-join_triangles.obj -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Tpo -c -o ../api/__top_builddir__bin_Assets-join_triangles.obj `if test -f '../api/join_triangles.c'; then $(CYGPATH_W) '../api/join_triangles.c'; else $(CYGPATH_W) '$(srcdir)/../api/join_triangles.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Tpo ../api/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/join_triangles.c' object='../api/__top_builddir__bin_Assets-join_triangles.obj' libtool=no @AMDEPBACKSLASH@
+../API/__top_builddir__bin_Assets-join_triangles.obj: ../API/join_triangles.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/__top_builddir__bin_Assets-join_triangles.obj -MD -MP -MF ../API/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Tpo -c -o ../API/__top_builddir__bin_Assets-join_triangles.obj `if test -f '../API/join_triangles.c'; then $(CYGPATH_W) '../API/join_triangles.c'; else $(CYGPATH_W) '$(srcdir)/../API/join_triangles.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../API/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Tpo ../API/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/join_triangles.c' object='../API/__top_builddir__bin_Assets-join_triangles.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__bin_Assets-join_triangles.obj `if test -f '../api/join_triangles.c'; then $(CYGPATH_W) '../api/join_triangles.c'; else $(CYGPATH_W) '$(srcdir)/../api/join_triangles.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/__top_builddir__bin_Assets-join_triangles.obj `if test -f '../API/join_triangles.c'; then $(CYGPATH_W) '../API/join_triangles.c'; else $(CYGPATH_W) '$(srcdir)/../API/join_triangles.c'; fi`
 
-../api/__top_builddir__bin_Assets-outlined_triangle.o: ../api/outlined_triangle.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__bin_Assets-outlined_triangle.o -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Tpo -c -o ../api/__top_builddir__bin_Assets-outlined_triangle.o `test -f '../api/outlined_triangle.c' || echo '$(srcdir)/'`../api/outlined_triangle.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Tpo ../api/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/outlined_triangle.c' object='../api/__top_builddir__bin_Assets-outlined_triangle.o' libtool=no @AMDEPBACKSLASH@
+../API/__top_builddir__bin_Assets-outlined_triangle.o: ../API/outlined_triangle.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/__top_builddir__bin_Assets-outlined_triangle.o -MD -MP -MF ../API/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Tpo -c -o ../API/__top_builddir__bin_Assets-outlined_triangle.o `test -f '../API/outlined_triangle.c' || echo '$(srcdir)/'`../API/outlined_triangle.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../API/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Tpo ../API/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/outlined_triangle.c' object='../API/__top_builddir__bin_Assets-outlined_triangle.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__bin_Assets-outlined_triangle.o `test -f '../api/outlined_triangle.c' || echo '$(srcdir)/'`../api/outlined_triangle.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/__top_builddir__bin_Assets-outlined_triangle.o `test -f '../API/outlined_triangle.c' || echo '$(srcdir)/'`../API/outlined_triangle.c
 
-../api/__top_builddir__bin_Assets-outlined_triangle.obj: ../api/outlined_triangle.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../api/__top_builddir__bin_Assets-outlined_triangle.obj -MD -MP -MF ../api/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Tpo -c -o ../api/__top_builddir__bin_Assets-outlined_triangle.obj `if test -f '../api/outlined_triangle.c'; then $(CYGPATH_W) '../api/outlined_triangle.c'; else $(CYGPATH_W) '$(srcdir)/../api/outlined_triangle.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../api/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Tpo ../api/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../api/outlined_triangle.c' object='../api/__top_builddir__bin_Assets-outlined_triangle.obj' libtool=no @AMDEPBACKSLASH@
+../API/__top_builddir__bin_Assets-outlined_triangle.obj: ../API/outlined_triangle.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/__top_builddir__bin_Assets-outlined_triangle.obj -MD -MP -MF ../API/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Tpo -c -o ../API/__top_builddir__bin_Assets-outlined_triangle.obj `if test -f '../API/outlined_triangle.c'; then $(CYGPATH_W) '../API/outlined_triangle.c'; else $(CYGPATH_W) '$(srcdir)/../API/outlined_triangle.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../API/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Tpo ../API/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/outlined_triangle.c' object='../API/__top_builddir__bin_Assets-outlined_triangle.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../api/__top_builddir__bin_Assets-outlined_triangle.obj `if test -f '../api/outlined_triangle.c'; then $(CYGPATH_W) '../api/outlined_triangle.c'; else $(CYGPATH_W) '$(srcdir)/../api/outlined_triangle.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/__top_builddir__bin_Assets-outlined_triangle.obj `if test -f '../API/outlined_triangle.c'; then $(CYGPATH_W) '../API/outlined_triangle.c'; else $(CYGPATH_W) '$(srcdir)/../API/outlined_triangle.c'; fi`
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
@@ -578,8 +578,8 @@ clean-generic:
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
-	-rm -f ../api/$(DEPDIR)/$(am__dirstamp)
-	-rm -f ../api/$(am__dirstamp)
+	-rm -f ../API/$(DEPDIR)/$(am__dirstamp)
+	-rm -f ../API/$(am__dirstamp)
 	-test -z "$(top_builddir)/bin/$(am__dirstamp)" || rm -f $(top_builddir)/bin/$(am__dirstamp)
 
 maintainer-clean-generic:
@@ -590,7 +590,7 @@ clean: clean-am
 clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
 
 distclean: distclean-am
-	-rm -rf ../api/$(DEPDIR) ./$(DEPDIR)
+	-rm -rf ../API/$(DEPDIR) ./$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -636,7 +636,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -rf ../api/$(DEPDIR) ./$(DEPDIR)
+	-rm -rf ../API/$(DEPDIR) ./$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

@@ -9,7 +9,7 @@
  * for the most part are described in this file.
  */
 #include <cairo.h>
-#include "../api/include.h"
+#include "../API/include.h"
 
 /*
  * The all_imgs() function will make the logo
