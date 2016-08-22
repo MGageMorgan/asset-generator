@@ -1,31 +1,67 @@
 #include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 #include <argp.h>
 #include <gtk/gtk.h>
 #include "../api/include.h"
 
-void on_about_activate(GtkMenuItem *about, GtkAboutDialog *gtk_about);
-
 void on_frankenlogos_clicked() {
+struct stat st = {0};
+
+if (stat("assets/logo/frankenlogos", &st) == -1) {
+    mkdir("assets/logo/frankenlogos", 0700);
+}
+
  frankenlogos();
 }
 
 void on_colored_nologo_clicked() {
+struct stat st = {0};
+
+if (stat("assets/logo/colored-no-logo", &st) == -1) {
+    mkdir("assets/logo/colored-no-logo", 0700);
+}
+
  colored_nologo(); 
 }
 
 void on_all_clicked() {
+struct stat st = {0};
+
+if (stat("assets/logo/all", &st) == -1) {
+    mkdir("assets/logo/all", 0700);
+}
+
  all_imgs();
 }
 
 void on_outlined_nologo_clicked() {
+struct stat st = {0};
+
+if (stat("assets/logo/outlined-no-logo", &st) == -1) {
+    mkdir("assets/logo/outlined-no-logo", 0700);
+}
+
  outlined_nologo();
 }
 
 void on_outlined_all_clicked() {
+struct stat st = {0};
+
+if (stat("assets/logo/outlined-all", &st) == -1) {
+    mkdir("assets/logo/outlined-all", 0700);
+}
+
  outlined_all();
 }
 
 void on_all_colors_clicked() {
+struct stat st = {0};
+
+if (stat("assets/logo/all-colors", &st) == -1) {
+    mkdir("assets/logo/all-colors", 0700);
+}
+
  colored_all();
 }
 
@@ -56,6 +92,16 @@ static int parse_opt (int key, char *arg, struct argp_state *state) {
 
 
 int main(int argc, char *argv[]) {
+struct stat st = {0};
+
+if (stat("assets", &st) == -1) {
+    mkdir("assets", 0700);
+}
+
+if (stat("assets/logo", &st) == -1) {
+    mkdir("assets/logo", 0700);
+}
+
 if (argc == 1) {
     GtkBuilder      *builder; 
     GtkWidget       *window;
