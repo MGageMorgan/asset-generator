@@ -111,7 +111,7 @@ PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
 am___top_builddir__bin_Assets_OBJECTS =  \
 	__top_builddir__bin_Assets-main.$(OBJEXT) \
-	__top_builddir__bin_Assets-options.$(OBJEXT) \
+	__top_builddir__bin_Assets-logo.$(OBJEXT) \
 	../API/__top_builddir__bin_Assets-colored_triangle.$(OBJEXT) \
 	../API/__top_builddir__bin_Assets-join_triangles.$(OBJEXT) \
 	../API/__top_builddir__bin_Assets-outlined_triangle.$(OBJEXT)
@@ -266,7 +266,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-__top_builddir__bin_Assets_SOURCES = main.c options.c ../API/colored_triangle.c ../API/join_triangles.c ../API/outlined_triangle.c ../API/include.h ../API/main_window.ui ../API/crstfn-hybrid1.png
+__top_builddir__bin_Assets_SOURCES = main.c logo.c ../API/colored_triangle.c ../API/join_triangles.c ../API/outlined_triangle.c ../API/include.h ../API/main_window.ui ../API/crstfn-hybrid1.png
 __top_builddir__bin_Assets_CFLAGS = `pkg-config --cflags gtk+-3.0 cairo` -export-dynamic
 __top_builddir__bin_Assets_LDFLAGS = `pkg-config --libs gtk+-3.0 cairo` 
 all: all-am
@@ -374,8 +374,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@../API/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../API/$(DEPDIR)/__top_builddir__bin_Assets-join_triangles.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../API/$(DEPDIR)/__top_builddir__bin_Assets-outlined_triangle.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__bin_Assets-logo.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__bin_Assets-main.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__bin_Assets-options.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -407,19 +407,19 @@ __top_builddir__bin_Assets-main.obj: main.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o __top_builddir__bin_Assets-main.obj `if test -f 'main.c'; then $(CYGPATH_W) 'main.c'; else $(CYGPATH_W) '$(srcdir)/main.c'; fi`
 
-__top_builddir__bin_Assets-options.o: options.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT __top_builddir__bin_Assets-options.o -MD -MP -MF $(DEPDIR)/__top_builddir__bin_Assets-options.Tpo -c -o __top_builddir__bin_Assets-options.o `test -f 'options.c' || echo '$(srcdir)/'`options.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/__top_builddir__bin_Assets-options.Tpo $(DEPDIR)/__top_builddir__bin_Assets-options.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='options.c' object='__top_builddir__bin_Assets-options.o' libtool=no @AMDEPBACKSLASH@
+__top_builddir__bin_Assets-logo.o: logo.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT __top_builddir__bin_Assets-logo.o -MD -MP -MF $(DEPDIR)/__top_builddir__bin_Assets-logo.Tpo -c -o __top_builddir__bin_Assets-logo.o `test -f 'logo.c' || echo '$(srcdir)/'`logo.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/__top_builddir__bin_Assets-logo.Tpo $(DEPDIR)/__top_builddir__bin_Assets-logo.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='logo.c' object='__top_builddir__bin_Assets-logo.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o __top_builddir__bin_Assets-options.o `test -f 'options.c' || echo '$(srcdir)/'`options.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o __top_builddir__bin_Assets-logo.o `test -f 'logo.c' || echo '$(srcdir)/'`logo.c
 
-__top_builddir__bin_Assets-options.obj: options.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT __top_builddir__bin_Assets-options.obj -MD -MP -MF $(DEPDIR)/__top_builddir__bin_Assets-options.Tpo -c -o __top_builddir__bin_Assets-options.obj `if test -f 'options.c'; then $(CYGPATH_W) 'options.c'; else $(CYGPATH_W) '$(srcdir)/options.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/__top_builddir__bin_Assets-options.Tpo $(DEPDIR)/__top_builddir__bin_Assets-options.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='options.c' object='__top_builddir__bin_Assets-options.obj' libtool=no @AMDEPBACKSLASH@
+__top_builddir__bin_Assets-logo.obj: logo.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT __top_builddir__bin_Assets-logo.obj -MD -MP -MF $(DEPDIR)/__top_builddir__bin_Assets-logo.Tpo -c -o __top_builddir__bin_Assets-logo.obj `if test -f 'logo.c'; then $(CYGPATH_W) 'logo.c'; else $(CYGPATH_W) '$(srcdir)/logo.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/__top_builddir__bin_Assets-logo.Tpo $(DEPDIR)/__top_builddir__bin_Assets-logo.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='logo.c' object='__top_builddir__bin_Assets-logo.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o __top_builddir__bin_Assets-options.obj `if test -f 'options.c'; then $(CYGPATH_W) 'options.c'; else $(CYGPATH_W) '$(srcdir)/options.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o __top_builddir__bin_Assets-logo.obj `if test -f 'logo.c'; then $(CYGPATH_W) 'logo.c'; else $(CYGPATH_W) '$(srcdir)/logo.c'; fi`
 
 ../API/__top_builddir__bin_Assets-colored_triangle.o: ../API/colored_triangle.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/__top_builddir__bin_Assets-colored_triangle.o -MD -MP -MF ../API/$(DEPDIR)/__top_builddir__bin_Assets-colored_triangle.Tpo -c -o ../API/__top_builddir__bin_Assets-colored_triangle.o `test -f '../API/colored_triangle.c' || echo '$(srcdir)/'`../API/colored_triangle.c

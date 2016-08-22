@@ -1,5 +1,5 @@
 #include <cairo.h>
-#include "../api/include.h"
+#include "include.h"
 
 void polygon(int img_width, int img_height, double r, double g, double b, double a, double verticeX1, double verticeY1, double verticeX2, double verticeY2, double verticeX3, double verticeY3, double verticeX4, double verticeY4, double verticeX5, double verticeY5, double verticeX6, double verticeY6, double verticeX7, double verticeY7, double verticeX8, double verticeY8, double verticeX9, double verticeY9, char img_name[50]) {
 
