@@ -3,6 +3,8 @@
 #include <gtk/gtk.h>
 #include "../api/include.h"
 
+void on_about_activate(GtkMenuItem *about, GtkAboutDialog *gtk_about);
+
 void on_frankenlogos_clicked() {
  frankenlogos();
 }
