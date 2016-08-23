@@ -8,7 +8,7 @@
 # Started from the bottom now the whole team fucking here
 
 bin_PROGRAMS = $(top_builddir)/bin/Assets
-__top_builddir__bin_Assets_SOURCES = Main.c Logo.c ../API/Shapes/ColoredTriangle.c ../API/JoinPieces/JoinTriangles.c ../API/Shapes/OutlinedTriangle.c ../API/include.h ../API/UI/MainWindow.ui ../API/Images/about.png ChatIcon.c ../API/JoinPieces/JoinIconChat.c ../API/Shapes/Rhombus.c ../API/Shapes/Polygon.c
+__top_builddir__bin_Assets_SOURCES = Main.c Logo.c ../API/Shapes/ColoredTriangle.c ../API/JoinPieces/JoinTriangles.c ../API/Shapes/OutlinedTriangle.c ../API/include.h ../API/UI/MainWindow.ui ChatIcon.c ../API/JoinPieces/JoinIconChat.c ../API/Shapes/Rhombus.c ../API/Shapes/Polygon.c ../API/UI/about.png
 __top_builddir__bin_Assets_CFLAGS = `pkg-config --cflags gtk+-3.0 cairo` -export-dynamic
 __top_builddir__bin_Assets_LDFLAGS = `pkg-config --libs gtk+-3.0 cairo` 
 
