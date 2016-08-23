@@ -18,8 +18,7 @@ AC_PROG_INSTALL
 # Checks for library functions.
 
 AC_CONFIG_FILES([Makefile
-                 src/Assets/Makefile
-		 src/Icons/Makefile])
+                 src/Assets/Makefile])
 
 AC_CONFIG_SUBDIRS([asset-generator-0.1])
 AC_OUTPUT

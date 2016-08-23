@@ -285,7 +285,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = foreign
-SUBDIRS = src/Icons src/Assets
+SUBDIRS = src/Assets
 INCLUDE = src/API/include.h src/API/UI/MainWindow.ui src/API/Images/About.png
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
