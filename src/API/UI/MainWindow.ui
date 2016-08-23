@@ -530,7 +530,7 @@ with the completed logo</property>
                                     <property name="margin_right">11</property>
                                     <property name="margin_top">11</property>
                                     <property name="margin_bottom">11</property>
-                                    <property name="pixbuf">GitHub-Mark-Light-64px.png</property>
+                                    <property name="pixbuf">rsz_1rsz_octocat.png</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">3</property>
@@ -545,7 +545,7 @@ with the completed logo</property>
                                     <property name="margin_right">11</property>
                                     <property name="margin_top">11</property>
                                     <property name="margin_bottom">11</property>
-                                    <property name="pixbuf">rsz_1rsz_octocat.png</property>
+                                    <property name="pixbuf">GitHub-Mark-Light-64px.png</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">0</property>
@@ -840,7 +840,7 @@ design language. There are several bugs.
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkFrame" id="GHFrame">
+                  <object class="GtkFrame" id="GitHubFrame1">
                     <property name="width_request">100</property>
                     <property name="height_request">50</property>
                     <property name="visible">True</property>
@@ -849,25 +849,27 @@ design language. There are several bugs.
                     <property name="margin_right">15</property>
                     <property name="margin_top">15</property>
                     <property name="margin_bottom">15</property>
+                    <property name="hexpand">False</property>
+                    <property name="vexpand">False</property>
                     <property name="label_xalign">0</property>
                     <property name="shadow_type">in</property>
                     <child>
-                      <object class="GtkAlignment" id="GHAlignmentContainer">
+                      <object class="GtkAlignment" id="GitHubAlignment1">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkBox" id="GHGridContainer">
+                          <object class="GtkBox" id="GitHubGridContainer1">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkGrid" id="GitHubGrid">
+                              <object class="GtkGrid" id="GitHubBaseContainer1">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="column_spacing">25</property>
                                 <child>
-                                  <object class="GtkLabel" id="GHSecondSlo">
+                                  <object class="GtkLabel" id="GHSecondSlot1">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="margin_bottom">15</property>
@@ -879,7 +881,7 @@ design language. There are several bugs.
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkLinkButton" id="GHThirdSlo">
+                                  <object class="GtkLinkButton" id="GHThirdSlot1">
                                     <property name="label" translatable="yes">Fork This Project on GitHub Now!!</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
@@ -895,9 +897,11 @@ design language. There are several bugs.
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkImage" id="GHOctocat">
+                                  <object class="GtkImage" id="GitHubMark1">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
+                                    <property name="margin_left">11</property>
+                                    <property name="margin_right">11</property>
                                     <property name="margin_top">11</property>
                                     <property name="margin_bottom">11</property>
                                     <property name="pixbuf">rsz_1rsz_octocat.png</property>
@@ -908,9 +912,11 @@ design language. There are several bugs.
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkImage" id="GHMark">
+                                  <object class="GtkImage" id="GitHubOctocat1">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
+                                    <property name="margin_left">11</property>
+                                    <property name="margin_right">11</property>
                                     <property name="margin_top">11</property>
                                     <property name="margin_bottom">11</property>
                                     <property name="pixbuf">GitHub-Mark-Light-64px.png</property>
@@ -932,7 +938,7 @@ design language. There are several bugs.
                       </object>
                     </child>
                     <child type="label">
-                      <object class="GtkLabel" id="GHFrameLabel">
+                      <object class="GtkLabel" id="ForkMeGHFrameLabel1">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">Fork Me On GitHub!</property>
