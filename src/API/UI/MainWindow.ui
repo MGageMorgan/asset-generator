@@ -2,24 +2,24 @@
 <!-- Generated with glade 3.20.0 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
-  <object class="GtkApplicationWindow" id="main">
+  <object class="GtkApplicationWindow" id="MainWindow">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Christoffen Assets</property>
     <property name="modal">True</property>
     <property name="window_position">center</property>
-    <property name="default_width">880</property>
+    <property name="default_width">900</property>
     <property name="default_height">550</property>
     <property name="icon">about.png</property>
     <property name="has_resize_grip">True</property>
     <property name="startup_id">Christoffen Assets</property>
     <child>
-      <object class="GtkBox">
+      <object class="GtkBox" id="NotebookHolder">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkNotebook">
-            <property name="width_request">880</property>
+          <object class="GtkNotebook" id="CreativeSidebar">
+            <property name="width_request">900</property>
             <property name="height_request">550</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -28,12 +28,12 @@
             <property name="tab_pos">left</property>
             <property name="show_border">False</property>
             <child>
-              <object class="GtkBox">
+              <object class="GtkBox" id="LogoContainer">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="GtkGrid">
+                  <object class="GtkGrid" id="LogoFramesAndButtons">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_left">5</property>
@@ -46,7 +46,7 @@
                     <property name="column_homogeneous">True</property>
                     <property name="baseline_row">4</property>
                     <child>
-                      <object class="GtkBox">
+                      <object class="GtkBox" id="LogoLeftColumn">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="margin_left">11</property>
@@ -57,7 +57,7 @@
                         <property name="spacing">11</property>
                         <property name="baseline_position">top</property>
                         <child>
-                          <object class="GtkFrame" id="Frankenlogos1">
+                          <object class="GtkFrame" id="FrankenlogoFrame">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_left">11</property>
@@ -95,7 +95,7 @@ aka "the jigsaw puzzle effect"</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="frankenlogos1">
+                          <object class="GtkButton" id="FrankenlogoButton">
                             <property name="label" translatable="yes">Frankenlogos</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
@@ -112,7 +112,7 @@ aka "the jigsaw puzzle effect"</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkSeparator">
+                          <object class="GtkSeparator" id="LeftColumnFirstSeparator">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_left">11</property>
@@ -125,7 +125,7 @@ aka "the jigsaw puzzle effect"</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkFrame" id="Colored (no logo)1">
+                          <object class="GtkFrame" id="ColoredNoLogoFrame">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_left">11</property>
@@ -163,7 +163,7 @@ without the completed logo</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="colored_nologo1">
+                          <object class="GtkButton" id="ColoredNoLogoButton">
                             <property name="label" translatable="yes">Colored (no logo)</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
@@ -180,7 +180,7 @@ without the completed logo</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkSeparator">
+                          <object class="GtkSeparator" id="LeftColumnSecondSeparator">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_left">11</property>
@@ -193,7 +193,7 @@ without the completed logo</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkFrame" id="All1">
+                          <object class="GtkFrame" id="GenerateAllFrame">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_left">11</property>
@@ -231,7 +231,7 @@ without the completed logo</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="all1">
+                          <object class="GtkButton" id="GenerateAllButton">
                             <property name="label" translatable="yes">All</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
@@ -254,7 +254,7 @@ without the completed logo</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkBox">
+                      <object class="GtkBox" id="LogoRightColumn">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="margin_left">11</property>
@@ -264,7 +264,7 @@ without the completed logo</property>
                         <property name="orientation">vertical</property>
                         <property name="spacing">11</property>
                         <child>
-                          <object class="GtkFrame" id="Outlined (no logo)1">
+                          <object class="GtkFrame" id="OutlinedNoLogoFrame">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_left">11</property>
@@ -302,7 +302,7 @@ completed logo</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="outlined_nologo1">
+                          <object class="GtkButton" id="OutlinedNoLogoButton">
                             <property name="label" translatable="yes">Outlined (no logo)</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
@@ -319,7 +319,7 @@ completed logo</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkSeparator">
+                          <object class="GtkSeparator" id="RightColumnFirstSeparator">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_left">11</property>
@@ -332,7 +332,7 @@ completed logo</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkFrame" id="Outlined (all)1">
+                          <object class="GtkFrame" id="OutlinedAllFrame">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_left">11</property>
@@ -370,7 +370,7 @@ with the completed logo</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="outlined_all1">
+                          <object class="GtkButton" id="OutlinedAllButton">
                             <property name="label" translatable="yes">Outlined (all)</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
@@ -387,7 +387,7 @@ with the completed logo</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkSeparator">
+                          <object class="GtkSeparator" id="RightColumnSecondSeparator">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_left">11</property>
@@ -400,7 +400,7 @@ with the completed logo</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkFrame" id="All colors1">
+                          <object class="GtkFrame" id="AllColorsFrame">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_left">11</property>
@@ -438,7 +438,7 @@ with the completed logo</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="all_colors1">
+                          <object class="GtkButton" id="AllColorsButton">
                             <property name="label" translatable="yes">All colors</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
@@ -468,7 +468,9 @@ with the completed logo</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkFrame">
+                  <object class="GtkFrame" id="GitHubFrame">
+                    <property name="width_request">100</property>
+                    <property name="height_request">50</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_left">15</property>
@@ -478,22 +480,22 @@ with the completed logo</property>
                     <property name="label_xalign">0</property>
                     <property name="shadow_type">in</property>
                     <child>
-                      <object class="GtkAlignment">
+                      <object class="GtkAlignment" id="GitHubAlignment">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkBox">
+                          <object class="GtkBox" id="GitHubGridContainer">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkGrid">
+                              <object class="GtkGrid" id="GitHubBaseContainer">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="column_spacing">50</property>
+                                <property name="column_spacing">25</property>
                                 <child>
-                                  <object class="GtkLabel">
+                                  <object class="GtkLabel" id="GHSecondSlot">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="margin_bottom">15</property>
@@ -505,21 +507,7 @@ with the completed logo</property>
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkImage">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="margin_top">6</property>
-                                    <property name="margin_bottom">6</property>
-                                    <property name="icon_name">emblem-shared-symbolic.symbolic</property>
-                                    <property name="icon_size">6</property>
-                                  </object>
-                                  <packing>
-                                    <property name="left_attach">0</property>
-                                    <property name="top_attach">0</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkLinkButton">
+                                  <object class="GtkLinkButton" id="GHThirdSlot">
                                     <property name="label" translatable="yes">Fork This Project on GitHub Now!!</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
@@ -531,6 +519,36 @@ with the completed logo</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">2</property>
+                                    <property name="top_attach">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkImage" id="GitHubMark">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="margin_left">11</property>
+                                    <property name="margin_right">11</property>
+                                    <property name="margin_top">11</property>
+                                    <property name="margin_bottom">11</property>
+                                    <property name="pixbuf">GitHub-Mark-Light-64px.png</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">3</property>
+                                    <property name="top_attach">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkImage" id="GitHubOctocat">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="margin_left">11</property>
+                                    <property name="margin_right">11</property>
+                                    <property name="margin_top">11</property>
+                                    <property name="margin_bottom">11</property>
+                                    <property name="pixbuf">rsz_1rsz_octocat.png</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
                                     <property name="top_attach">0</property>
                                   </packing>
                                 </child>
@@ -546,7 +564,7 @@ with the completed logo</property>
                       </object>
                     </child>
                     <child type="label">
-                      <object class="GtkLabel">
+                      <object class="GtkLabel" id="ForkMeGHFrameLabel">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">Fork Me On GitHub!</property>
@@ -566,10 +584,10 @@ with the completed logo</property>
               </object>
             </child>
             <child type="tab">
-              <object class="GtkLabel">
+              <object class="GtkLabel" id="LogoTabLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Logos</property>
+                <property name="label" translatable="yes">Logo</property>
               </object>
               <packing>
                 <property name="menu_label">Logos</property>
@@ -578,12 +596,12 @@ with the completed logo</property>
               </packing>
             </child>
             <child>
-              <object class="GtkBox">
+              <object class="GtkBox" id="ChatIconContainer">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="GtkFrame">
+                  <object class="GtkFrame" id="PreviewFrame">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_left">11</property>
@@ -593,21 +611,22 @@ with the completed logo</property>
                     <property name="label_xalign">0</property>
                     <property name="shadow_type">in</property>
                     <child>
-                      <object class="GtkAlignment">
+                      <object class="GtkAlignment" id="PreviewInsideAlignment">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkGrid">
+                          <object class="GtkGrid" id="PreviewBase">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="row_spacing">1</property>
                             <property name="column_spacing">25</property>
                             <property name="baseline_row">1</property>
                             <child>
-                              <object class="GtkLabel">
+                              <object class="GtkLabel" id="PreviewDescriptionLabel">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
+                                <property name="margin_top">3</property>
                                 <property name="label" translatable="yes">The following is a preview for the Chat icon.
 
 Originally designed by Elijah Clark in MS Paint, this icon has been reformatted by M. Gage Morgan to fit the Neon 
@@ -620,10 +639,14 @@ design language. There are several bugs.
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkImage">
+                              <object class="GtkImage" id="OriginalChatIcon">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="icon_name">face-wink-symbolic</property>
+                                <property name="margin_left">11</property>
+                                <property name="margin_right">11</property>
+                                <property name="margin_top">11</property>
+                                <property name="margin_bottom">25</property>
+                                <property name="pixbuf">rsz_1rsz_1chat.png</property>
                                 <property name="icon_size">6</property>
                               </object>
                               <packing>
@@ -636,7 +659,7 @@ design language. There are several bugs.
                       </object>
                     </child>
                     <child type="label">
-                      <object class="GtkLabel">
+                      <object class="GtkLabel" id="PreviewFrameLabel">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">Preview</property>
@@ -653,13 +676,13 @@ design language. There are several bugs.
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkGrid">
+                  <object class="GtkGrid" id="ChatIconButtonFrameHolder">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="row_homogeneous">True</property>
                     <property name="column_homogeneous">True</property>
                     <child>
-                      <object class="GtkBox">
+                      <object class="GtkBox" id="LeftColumn">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="margin_left">11</property>
@@ -671,7 +694,7 @@ design language. There are several bugs.
                         <property name="spacing">11</property>
                         <property name="baseline_position">top</property>
                         <child>
-                          <object class="GtkFrame">
+                          <object class="GtkFrame" id="PiecesAndIconFrame">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_top">11</property>
@@ -733,7 +756,7 @@ design language. There are several bugs.
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkBox">
+                      <object class="GtkBox" id="ChatRightColumn">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="margin_left">11</property>
@@ -744,7 +767,7 @@ design language. There are several bugs.
                         <property name="orientation">vertical</property>
                         <property name="spacing">11</property>
                         <child>
-                          <object class="GtkFrame">
+                          <object class="GtkFrame" id="ChatJustPiecesFrame">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="margin_left">11</property>
@@ -787,7 +810,7 @@ design language. There are several bugs.
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="ChatJustPieces">
+                          <object class="GtkButton" id="ChatJustPiecesButton">
                             <property name="label" translatable="yes">Pieces (without icon)</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
@@ -817,36 +840,36 @@ design language. There are several bugs.
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkFrame">
+                  <object class="GtkFrame" id="GHFrame">
+                    <property name="width_request">100</property>
+                    <property name="height_request">50</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="margin_left">11</property>
-                    <property name="margin_right">11</property>
-                    <property name="margin_top">11</property>
-                    <property name="margin_bottom">11</property>
+                    <property name="margin_left">15</property>
+                    <property name="margin_right">15</property>
+                    <property name="margin_top">15</property>
+                    <property name="margin_bottom">15</property>
                     <property name="label_xalign">0</property>
                     <property name="shadow_type">in</property>
                     <child>
-                      <object class="GtkAlignment">
+                      <object class="GtkAlignment" id="GHAlignmentContainer">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkBox">
+                          <object class="GtkBox" id="GHGridContainer">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkGrid">
+                              <object class="GtkGrid" id="GitHubGrid">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="column_spacing">50</property>
+                                <property name="column_spacing">25</property>
                                 <child>
-                                  <object class="GtkLabel">
+                                  <object class="GtkLabel" id="GHSecondSlo">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="margin_left">15</property>
-                                    <property name="margin_right">15</property>
                                     <property name="margin_bottom">15</property>
                                     <property name="label" translatable="yes">Want to make things move quicker (at least for yourself)?</property>
                                   </object>
@@ -856,23 +879,7 @@ design language. There are several bugs.
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkImage">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="margin_left">6</property>
-                                    <property name="margin_right">6</property>
-                                    <property name="margin_top">6</property>
-                                    <property name="margin_bottom">6</property>
-                                    <property name="icon_name">emblem-shared-symbolic.symbolic</property>
-                                    <property name="icon_size">6</property>
-                                  </object>
-                                  <packing>
-                                    <property name="left_attach">0</property>
-                                    <property name="top_attach">0</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkLinkButton">
+                                  <object class="GtkLinkButton" id="GHThirdSlo">
                                     <property name="label" translatable="yes">Fork This Project on GitHub Now!!</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
@@ -884,6 +891,32 @@ design language. There are several bugs.
                                   </object>
                                   <packing>
                                     <property name="left_attach">2</property>
+                                    <property name="top_attach">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkImage" id="GHOctocat">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="margin_top">11</property>
+                                    <property name="margin_bottom">11</property>
+                                    <property name="pixbuf">rsz_1rsz_octocat.png</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">3</property>
+                                    <property name="top_attach">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkImage" id="GHMark">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="margin_top">11</property>
+                                    <property name="margin_bottom">11</property>
+                                    <property name="pixbuf">GitHub-Mark-Light-64px.png</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
                                     <property name="top_attach">0</property>
                                   </packing>
                                 </child>
@@ -899,7 +932,7 @@ design language. There are several bugs.
                       </object>
                     </child>
                     <child type="label">
-                      <object class="GtkLabel">
+                      <object class="GtkLabel" id="GHFrameLabel">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">Fork Me On GitHub!</property>
@@ -922,7 +955,7 @@ design language. There are several bugs.
               </packing>
             </child>
             <child type="tab">
-              <object class="GtkLabel">
+              <object class="GtkLabel" id="ChatIconTabLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_left">10</property>
@@ -935,12 +968,12 @@ design language. There are several bugs.
               </packing>
             </child>
             <child>
-              <object class="GtkBox">
+              <object class="GtkBox" id="AboutContainer">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="GtkImage">
+                  <object class="GtkImage" id="ChristoffenFrankenlogo">
                     <property name="width_request">421</property>
                     <property name="height_request">410</property>
                     <property name="visible">True</property>
@@ -955,7 +988,7 @@ design language. There are several bugs.
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel">
+                  <object class="GtkLabel" id="ChristoffenAssetsLabel">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="label" translatable="yes">Christoffen Assets</property>
@@ -973,7 +1006,7 @@ design language. There are several bugs.
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel">
+                  <object class="GtkLabel" id="VersionLabel">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="label" translatable="yes">Version 3 BETA</property>
@@ -993,7 +1026,7 @@ design language. There are several bugs.
               </packing>
             </child>
             <child type="tab">
-              <object class="GtkLabel">
+              <object class="GtkLabel" id="AboutTabLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">About</property>
