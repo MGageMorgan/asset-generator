@@ -114,7 +114,11 @@ am___top_builddir__bin_Assets_OBJECTS =  \
 	__top_builddir__bin_Assets-Logo.$(OBJEXT) \
 	../API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.$(OBJEXT) \
 	../API/JoinPieces/__top_builddir__bin_Assets-JoinTriangles.$(OBJEXT) \
-	../API/Shapes/__top_builddir__bin_Assets-OutlinedTriangle.$(OBJEXT)
+	../API/Shapes/__top_builddir__bin_Assets-OutlinedTriangle.$(OBJEXT) \
+	__top_builddir__bin_Assets-ChatIcon.$(OBJEXT) \
+	../API/JoinPieces/__top_builddir__bin_Assets-JoinIconChat.$(OBJEXT) \
+	../API/Shapes/__top_builddir__bin_Assets-Rhombus.$(OBJEXT) \
+	../API/Shapes/__top_builddir__bin_Assets-Polygon.$(OBJEXT)
 __top_builddir__bin_Assets_OBJECTS =  \
 	$(am___top_builddir__bin_Assets_OBJECTS)
 __top_builddir__bin_Assets_LDADD = $(LDADD)
@@ -266,7 +270,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-__top_builddir__bin_Assets_SOURCES = Main.c Logo.c ../API/Shapes/ColoredTriangle.c ../API/JoinPieces/JoinTriangles.c ../API/Shapes/OutlinedTriangle.c ../API/include.h ../API/UI/MainWindow.ui ../API/Images/About.png
+__top_builddir__bin_Assets_SOURCES = Main.c Logo.c ../API/Shapes/ColoredTriangle.c ../API/JoinPieces/JoinTriangles.c ../API/Shapes/OutlinedTriangle.c ../API/include.h ../API/UI/MainWindow.ui ../API/Images/about.png ChatIcon.c ../API/JoinPieces/JoinIconChat.c ../API/Shapes/Rhombus.c ../API/Shapes/Polygon.c
 __top_builddir__bin_Assets_CFLAGS = `pkg-config --cflags gtk+-3.0 cairo` -export-dynamic
 __top_builddir__bin_Assets_LDFLAGS = `pkg-config --libs gtk+-3.0 cairo` 
 all: all-am
@@ -365,6 +369,15 @@ clean-binPROGRAMS:
 ../API/Shapes/__top_builddir__bin_Assets-OutlinedTriangle.$(OBJEXT):  \
 	../API/Shapes/$(am__dirstamp) \
 	../API/Shapes/$(DEPDIR)/$(am__dirstamp)
+../API/JoinPieces/__top_builddir__bin_Assets-JoinIconChat.$(OBJEXT):  \
+	../API/JoinPieces/$(am__dirstamp) \
+	../API/JoinPieces/$(DEPDIR)/$(am__dirstamp)
+../API/Shapes/__top_builddir__bin_Assets-Rhombus.$(OBJEXT):  \
+	../API/Shapes/$(am__dirstamp) \
+	../API/Shapes/$(DEPDIR)/$(am__dirstamp)
+../API/Shapes/__top_builddir__bin_Assets-Polygon.$(OBJEXT):  \
+	../API/Shapes/$(am__dirstamp) \
+	../API/Shapes/$(DEPDIR)/$(am__dirstamp)
 $(top_builddir)/bin/$(am__dirstamp):
 	@$(MKDIR_P) $(top_builddir)/bin
 	@: > $(top_builddir)/bin/$(am__dirstamp)
@@ -381,9 +394,13 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@../API/JoinPieces/$(DEPDIR)/__top_builddir__bin_Assets-JoinIconChat.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../API/JoinPieces/$(DEPDIR)/__top_builddir__bin_Assets-JoinTriangles.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-OutlinedTriangle.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Polygon.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Rhombus.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__bin_Assets-ChatIcon.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__bin_Assets-Logo.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__bin_Assets-Main.Po@am__quote@
 
@@ -472,6 +489,62 @@ __top_builddir__bin_Assets-Logo.obj: Logo.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/Shapes/OutlinedTriangle.c' object='../API/Shapes/__top_builddir__bin_Assets-OutlinedTriangle.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/Shapes/__top_builddir__bin_Assets-OutlinedTriangle.obj `if test -f '../API/Shapes/OutlinedTriangle.c'; then $(CYGPATH_W) '../API/Shapes/OutlinedTriangle.c'; else $(CYGPATH_W) '$(srcdir)/../API/Shapes/OutlinedTriangle.c'; fi`
+
+__top_builddir__bin_Assets-ChatIcon.o: ChatIcon.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT __top_builddir__bin_Assets-ChatIcon.o -MD -MP -MF $(DEPDIR)/__top_builddir__bin_Assets-ChatIcon.Tpo -c -o __top_builddir__bin_Assets-ChatIcon.o `test -f 'ChatIcon.c' || echo '$(srcdir)/'`ChatIcon.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/__top_builddir__bin_Assets-ChatIcon.Tpo $(DEPDIR)/__top_builddir__bin_Assets-ChatIcon.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='ChatIcon.c' object='__top_builddir__bin_Assets-ChatIcon.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o __top_builddir__bin_Assets-ChatIcon.o `test -f 'ChatIcon.c' || echo '$(srcdir)/'`ChatIcon.c
+
+__top_builddir__bin_Assets-ChatIcon.obj: ChatIcon.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT __top_builddir__bin_Assets-ChatIcon.obj -MD -MP -MF $(DEPDIR)/__top_builddir__bin_Assets-ChatIcon.Tpo -c -o __top_builddir__bin_Assets-ChatIcon.obj `if test -f 'ChatIcon.c'; then $(CYGPATH_W) 'ChatIcon.c'; else $(CYGPATH_W) '$(srcdir)/ChatIcon.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/__top_builddir__bin_Assets-ChatIcon.Tpo $(DEPDIR)/__top_builddir__bin_Assets-ChatIcon.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='ChatIcon.c' object='__top_builddir__bin_Assets-ChatIcon.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o __top_builddir__bin_Assets-ChatIcon.obj `if test -f 'ChatIcon.c'; then $(CYGPATH_W) 'ChatIcon.c'; else $(CYGPATH_W) '$(srcdir)/ChatIcon.c'; fi`
+
+../API/JoinPieces/__top_builddir__bin_Assets-JoinIconChat.o: ../API/JoinPieces/JoinIconChat.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/JoinPieces/__top_builddir__bin_Assets-JoinIconChat.o -MD -MP -MF ../API/JoinPieces/$(DEPDIR)/__top_builddir__bin_Assets-JoinIconChat.Tpo -c -o ../API/JoinPieces/__top_builddir__bin_Assets-JoinIconChat.o `test -f '../API/JoinPieces/JoinIconChat.c' || echo '$(srcdir)/'`../API/JoinPieces/JoinIconChat.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../API/JoinPieces/$(DEPDIR)/__top_builddir__bin_Assets-JoinIconChat.Tpo ../API/JoinPieces/$(DEPDIR)/__top_builddir__bin_Assets-JoinIconChat.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/JoinPieces/JoinIconChat.c' object='../API/JoinPieces/__top_builddir__bin_Assets-JoinIconChat.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/JoinPieces/__top_builddir__bin_Assets-JoinIconChat.o `test -f '../API/JoinPieces/JoinIconChat.c' || echo '$(srcdir)/'`../API/JoinPieces/JoinIconChat.c
+
+../API/JoinPieces/__top_builddir__bin_Assets-JoinIconChat.obj: ../API/JoinPieces/JoinIconChat.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/JoinPieces/__top_builddir__bin_Assets-JoinIconChat.obj -MD -MP -MF ../API/JoinPieces/$(DEPDIR)/__top_builddir__bin_Assets-JoinIconChat.Tpo -c -o ../API/JoinPieces/__top_builddir__bin_Assets-JoinIconChat.obj `if test -f '../API/JoinPieces/JoinIconChat.c'; then $(CYGPATH_W) '../API/JoinPieces/JoinIconChat.c'; else $(CYGPATH_W) '$(srcdir)/../API/JoinPieces/JoinIconChat.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../API/JoinPieces/$(DEPDIR)/__top_builddir__bin_Assets-JoinIconChat.Tpo ../API/JoinPieces/$(DEPDIR)/__top_builddir__bin_Assets-JoinIconChat.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/JoinPieces/JoinIconChat.c' object='../API/JoinPieces/__top_builddir__bin_Assets-JoinIconChat.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/JoinPieces/__top_builddir__bin_Assets-JoinIconChat.obj `if test -f '../API/JoinPieces/JoinIconChat.c'; then $(CYGPATH_W) '../API/JoinPieces/JoinIconChat.c'; else $(CYGPATH_W) '$(srcdir)/../API/JoinPieces/JoinIconChat.c'; fi`
+
+../API/Shapes/__top_builddir__bin_Assets-Rhombus.o: ../API/Shapes/Rhombus.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/Shapes/__top_builddir__bin_Assets-Rhombus.o -MD -MP -MF ../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Rhombus.Tpo -c -o ../API/Shapes/__top_builddir__bin_Assets-Rhombus.o `test -f '../API/Shapes/Rhombus.c' || echo '$(srcdir)/'`../API/Shapes/Rhombus.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Rhombus.Tpo ../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Rhombus.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/Shapes/Rhombus.c' object='../API/Shapes/__top_builddir__bin_Assets-Rhombus.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/Shapes/__top_builddir__bin_Assets-Rhombus.o `test -f '../API/Shapes/Rhombus.c' || echo '$(srcdir)/'`../API/Shapes/Rhombus.c
+
+../API/Shapes/__top_builddir__bin_Assets-Rhombus.obj: ../API/Shapes/Rhombus.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/Shapes/__top_builddir__bin_Assets-Rhombus.obj -MD -MP -MF ../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Rhombus.Tpo -c -o ../API/Shapes/__top_builddir__bin_Assets-Rhombus.obj `if test -f '../API/Shapes/Rhombus.c'; then $(CYGPATH_W) '../API/Shapes/Rhombus.c'; else $(CYGPATH_W) '$(srcdir)/../API/Shapes/Rhombus.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Rhombus.Tpo ../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Rhombus.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/Shapes/Rhombus.c' object='../API/Shapes/__top_builddir__bin_Assets-Rhombus.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/Shapes/__top_builddir__bin_Assets-Rhombus.obj `if test -f '../API/Shapes/Rhombus.c'; then $(CYGPATH_W) '../API/Shapes/Rhombus.c'; else $(CYGPATH_W) '$(srcdir)/../API/Shapes/Rhombus.c'; fi`
+
+../API/Shapes/__top_builddir__bin_Assets-Polygon.o: ../API/Shapes/Polygon.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/Shapes/__top_builddir__bin_Assets-Polygon.o -MD -MP -MF ../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Polygon.Tpo -c -o ../API/Shapes/__top_builddir__bin_Assets-Polygon.o `test -f '../API/Shapes/Polygon.c' || echo '$(srcdir)/'`../API/Shapes/Polygon.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Polygon.Tpo ../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Polygon.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/Shapes/Polygon.c' object='../API/Shapes/__top_builddir__bin_Assets-Polygon.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/Shapes/__top_builddir__bin_Assets-Polygon.o `test -f '../API/Shapes/Polygon.c' || echo '$(srcdir)/'`../API/Shapes/Polygon.c
+
+../API/Shapes/__top_builddir__bin_Assets-Polygon.obj: ../API/Shapes/Polygon.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../API/Shapes/__top_builddir__bin_Assets-Polygon.obj -MD -MP -MF ../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Polygon.Tpo -c -o ../API/Shapes/__top_builddir__bin_Assets-Polygon.obj `if test -f '../API/Shapes/Polygon.c'; then $(CYGPATH_W) '../API/Shapes/Polygon.c'; else $(CYGPATH_W) '$(srcdir)/../API/Shapes/Polygon.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Polygon.Tpo ../API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Polygon.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../API/Shapes/Polygon.c' object='../API/Shapes/__top_builddir__bin_Assets-Polygon.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../API/Shapes/__top_builddir__bin_Assets-Polygon.obj `if test -f '../API/Shapes/Polygon.c'; then $(CYGPATH_W) '../API/Shapes/Polygon.c'; else $(CYGPATH_W) '$(srcdir)/../API/Shapes/Polygon.c'; fi`
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique

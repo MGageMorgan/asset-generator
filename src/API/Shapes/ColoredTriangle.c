@@ -14,7 +14,7 @@
  * The function declared with variables, 
  * explained below
  */
-void colored_triangle(int img_width, int img_height, double r, double g, double b, double a, double verticeX1, double verticeY1, double verticeX2, double verticeY2, double verticeX3, double verticeY3, char img_name[50]) {
+void ColoredTriangle(int img_width, int img_height, double r, double g, double b, double a, double verticeX1, double verticeY1, double verticeX2, double verticeY2, double verticeX3, double verticeY3, char img_name[50]) {
 
 cairo_surface_t *surface =
 	/*

@@ -4,6 +4,26 @@
 #include <gtk/gtk.h>
 #include "../API/include.h"
 
+void onChatAllPiecesClicked() {
+struct stat st = {0};
+
+if (stat("AppContent/IconChat/All", &st) == -1) {
+    mkdir("AppContent/IconChat/All", 0700);
+}
+
+ChatIconFull();
+}
+
+void onChatJustPiecesClicked() {
+struct stat st = {0};
+
+if (stat("AppContent/IconChat/PiecesOnly", &st) == -1) {
+    mkdir("AppContent/IconChat/PiecesOnly", 0700);
+}
+
+ChatIconPiecesOnly();
+}
+
 void onFrankenlogosClicked() {
 struct stat st = {0};
 
@@ -11,7 +31,7 @@ if (stat("AppContent/Logo/Frankenlogos", &st) == -1) {
     mkdir("AppContent/Logo/Frankenlogos", 0700);
 }
 
- frankenlogos();
+ Frankenlogos();
 }
 
 void onColoredNoLogoClicked() {
@@ -21,7 +41,7 @@ if (stat("AppContent/Logo/ColoredNoLogo", &st) == -1) {
     mkdir("AppContent/Logo/ColoredNoLogo", 0700);
 }
 
- colored_nologo(); 
+ ColoredNoLogo(); 
 }
 
 void onAllClicked() {
@@ -31,7 +51,7 @@ if (stat("AppContent/Logo/All", &st) == -1) {
     mkdir("AppContent/Logo/All", 0700);
 }
 
- all_imgs();
+ AllImages();
 }
 
 void onOutlinedNoLogoClicked() {
@@ -41,7 +61,7 @@ if (stat("AppContent/Logo/OutlinedNoLogo", &st) == -1) {
     mkdir("AppContent/Logo/OutlinedNoLogo", 0700);
 }
 
- outlined_nologo();
+ OutlinedNoLogo();
 }
 
 void onOutlinedAllClicked() {
@@ -51,7 +71,7 @@ if (stat("AppContent/Logo/OutlinedAll", &st) == -1) {
     mkdir("AppContent/Logo/OutlinedAll", 0700);
 }
 
- outlined_all();
+ OutlinedAll();
 }
 
 void onAllColorsClicked() {
@@ -61,7 +81,7 @@ if (stat("AppContent/Logo/AllColors", &st) == -1) {
     mkdir("AppContent/Logo/AllColors", 0700);
 }
 
- colored_all();
+ ColoredAll();
 }
 
 const char *argp_program_version = "Christoffen Assets";
@@ -71,19 +91,19 @@ static char doc[] = "Generates all of the logo, or just some.";
 static int parse_opt (int key, char *arg, struct argp_state *state) {
  switch (key) {
  case 'C': 
- colored_nologo(); 
+ ColoredNoLogo(); 
  break;
  case 'c':
- colored_all();
+ ColoredAll();
  break;
  case 'O':
- outlined_nologo();
+ OutlinedNoLogo();
  break;
  case 'o':
- outlined_all();
+ OutlinedAll();
  break;
  case 'F':
- frankenlogos();
+ Frankenlogos();
  break;
  }
  return 0;
@@ -99,6 +119,10 @@ if (stat("AppContent", &st) == -1) {
 
 if (stat("AppContent/Logo", &st) == -1) {
     mkdir("AppContent/Logo", 0700);
+}
+
+if (stat("AppContent/IconChat", &st) == -1) {
+    mkdir("AppContent/IconChat", 0700);
 }
 
 if (argc == 1) {
