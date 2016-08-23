@@ -3,13 +3,13 @@
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkApplicationWindow" id="MainWindow">
-    <property name="width_request">800</property>
-    <property name="height_request">100</property>
+    <property name="width_request">400</property>
+    <property name="height_request">25</property>
     <property name="can_focus">False</property>
     <property name="modal">True</property>
     <property name="window_position">center</property>
-    <property name="default_width">900</property>
-    <property name="default_height">550</property>
+    <property name="default_width">450</property>
+    <property name="default_height">50</property>
     <property name="icon">about.png</property>
     <property name="has_resize_grip">True</property>
     <property name="startup_id">Christoffen Assets</property>
@@ -111,7 +111,7 @@
                                     <property name="margin_right">11</property>
                                     <property name="margin_top">11</property>
                                     <property name="margin_bottom">11</property>
-                                    <property name="pixbuf">GitHub-Mark-Light-64px.png</property>
+                                    <property name="pixbuf">GitHub-Mark-64px.png</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">0</property>
@@ -733,9 +733,12 @@ with the completed logo</property>
             </child>
             <child type="tab">
               <object class="GtkLabel" id="LogoTabLabel">
+                <property name="name">55</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">Logo</property>
+                <property name="justify">right</property>
+                <property name="angle">23</property>
               </object>
               <packing>
                 <property name="menu_label">Logos</property>
@@ -1067,7 +1070,7 @@ design language. There are several bugs.
                                     <property name="margin_right">11</property>
                                     <property name="margin_top">11</property>
                                     <property name="margin_bottom">11</property>
-                                    <property name="pixbuf">GitHub-Mark-Light-64px.png</property>
+                                    <property name="pixbuf">GitHub-Mark-64px.png</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">0</property>
@@ -1112,9 +1115,9 @@ design language. There are several bugs.
               <object class="GtkLabel" id="ChatIconTabLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="margin_left">10</property>
-                <property name="margin_right">10</property>
-                <property name="label" translatable="yes">Chat Icon</property>
+                <property name="label" translatable="yes">Chat </property>
+                <property name="justify">right</property>
+                <property name="angle">23</property>
               </object>
               <packing>
                 <property name="position">1</property>
@@ -1184,6 +1187,8 @@ design language. There are several bugs.
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">About</property>
+                <property name="justify">right</property>
+                <property name="angle">23</property>
               </object>
               <packing>
                 <property name="position">2</property>
