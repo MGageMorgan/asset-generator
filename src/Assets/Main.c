@@ -134,7 +134,7 @@ if (argc == 1) {
     builder = gtk_builder_new();
     gtk_builder_add_from_file (builder, "../src/API/UI/MainWindow.ui", NULL);
  
-    window = GTK_WIDGET(gtk_builder_get_object(builder, "main"));
+    window = GTK_WIDGET(gtk_builder_get_object(builder, "MainWindow"));
     gtk_builder_connect_signals(builder, NULL);
  
     g_object_unref(builder);
