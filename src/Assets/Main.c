@@ -1,71 +1,70 @@
 #include <stdio.h>
-#include <sys/types.h>
 #include <sys/stat.h>
 #include <argp.h>
 #include <gtk/gtk.h>
 #include "../API/include.h"
 
-void on_frankenlogos_clicked() {
+void onFrankenlogosClicked() {
 struct stat st = {0};
 
-if (stat("assets/logo/frankenlogos", &st) == -1) {
-    mkdir("assets/logo/frankenlogos", 0700);
+if (stat("AppContent/Logo/Frankenlogos", &st) == -1) {
+    mkdir("AppContent/Logo/Frankenlogos", 0700);
 }
 
  frankenlogos();
 }
 
-void on_colored_nologo_clicked() {
+void onColoredNoLogoClicked() {
 struct stat st = {0};
 
-if (stat("assets/logo/colored-no-logo", &st) == -1) {
-    mkdir("assets/logo/colored-no-logo", 0700);
+if (stat("AppContent/Logo/ColoredNoLogo", &st) == -1) {
+    mkdir("AppContent/Logo/ColoredNoLogo", 0700);
 }
 
  colored_nologo(); 
 }
 
-void on_all_clicked() {
+void onAllClicked() {
 struct stat st = {0};
 
-if (stat("assets/logo/all", &st) == -1) {
-    mkdir("assets/logo/all", 0700);
+if (stat("AppContent/Logo/All", &st) == -1) {
+    mkdir("AppContent/Logo/All", 0700);
 }
 
  all_imgs();
 }
 
-void on_outlined_nologo_clicked() {
+void onOutlinedNoLogoClicked() {
 struct stat st = {0};
 
-if (stat("assets/logo/outlined-no-logo", &st) == -1) {
-    mkdir("assets/logo/outlined-no-logo", 0700);
+if (stat("AppContent/Logo/OutlinedNoLogo", &st) == -1) {
+    mkdir("AppContent/Logo/OutlinedNoLogo", 0700);
 }
 
  outlined_nologo();
 }
 
-void on_outlined_all_clicked() {
+void onOutlinedAllClicked() {
 struct stat st = {0};
 
-if (stat("assets/logo/outlined-all", &st) == -1) {
-    mkdir("assets/logo/outlined-all", 0700);
+if (stat("AppContent/Logo/OutlinedAll", &st) == -1) {
+    mkdir("AppContent/Logo/OutlinedAll", 0700);
 }
 
  outlined_all();
 }
 
-void on_all_colors_clicked() {
+void onAllColorsClicked() {
 struct stat st = {0};
 
-if (stat("assets/logo/all-colors", &st) == -1) {
-    mkdir("assets/logo/all-colors", 0700);
+if (stat("AppContent/Logo/AllColors", &st) == -1) {
+    mkdir("AppContent/Logo/AllColors", 0700);
 }
 
  colored_all();
 }
 
-const char *argp_program_version = "Christoffen Assets - Logo - 2.0.4";
+const char *argp_program_version = "Christoffen Assets";
 const char *argp_program_bug_address = "M. Gage Morgan <gage@christoffen.com>";
 static char doc[] = "Generates all of the logo, or just some.";
 
@@ -94,12 +93,12 @@ static int parse_opt (int key, char *arg, struct argp_state *state) {
 int main(int argc, char *argv[]) {
 struct stat st = {0};
 
-if (stat("assets", &st) == -1) {
-    mkdir("assets", 0700);
+if (stat("AppContent", &st) == -1) {
+    mkdir("AppContent", 0700);
 }
 
-if (stat("assets/logo", &st) == -1) {
-    mkdir("assets/logo", 0700);
+if (stat("AppContent/Logo", &st) == -1) {
+    mkdir("AppContent/Logo", 0700);
 }
 
 if (argc == 1) {

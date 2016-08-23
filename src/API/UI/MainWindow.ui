@@ -98,7 +98,7 @@ aka "the jigsaw puzzle effect"</property>
                         <property name="margin_left">11</property>
                         <property name="margin_right">11</property>
                         <property name="margin_bottom">11</property>
-                        <signal name="clicked" handler="on_frankenlogos_clicked" swapped="no"/>
+                        <signal name="clicked" handler="onFrankenlogosClicked" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -166,7 +166,7 @@ without the completed logo</property>
                         <property name="margin_left">11</property>
                         <property name="margin_right">11</property>
                         <property name="margin_bottom">11</property>
-                        <signal name="clicked" handler="on_colored_nologo_clicked" swapped="no"/>
+                        <signal name="clicked" handler="onColoredNoLogoClicked" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -234,7 +234,7 @@ without the completed logo</property>
                         <property name="margin_left">11</property>
                         <property name="margin_right">11</property>
                         <property name="margin_bottom">11</property>
-                        <signal name="clicked" handler="on_all_clicked" swapped="no"/>
+                        <signal name="clicked" handler="onAllClicked" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -305,7 +305,7 @@ completed logo</property>
                         <property name="margin_left">11</property>
                         <property name="margin_right">11</property>
                         <property name="margin_bottom">11</property>
-                        <signal name="clicked" handler="on_outlined_nologo_clicked" swapped="no"/>
+                        <signal name="clicked" handler="onOutlinedNoLogoClicked" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -373,7 +373,7 @@ with the completed logo</property>
                         <property name="margin_left">11</property>
                         <property name="margin_right">11</property>
                         <property name="margin_bottom">11</property>
-                        <signal name="clicked" handler="on_outlined_all_clicked" swapped="no"/>
+                        <signal name="clicked" handler="onOutlinedAllClicked" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -441,7 +441,7 @@ with the completed logo</property>
                         <property name="margin_left">11</property>
                         <property name="margin_right">11</property>
                         <property name="margin_bottom">11</property>
-                        <signal name="clicked" handler="on_all_colors_clicked" swapped="no"/>
+                        <signal name="clicked" handler="onAllColorsClicked" swapped="no"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
