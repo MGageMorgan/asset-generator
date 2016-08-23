@@ -471,10 +471,8 @@ with the completed logo</property>
                   <object class="GtkFrame">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="margin_left">15</property>
-                    <property name="margin_right">15</property>
-                    <property name="margin_top">15</property>
-                    <property name="margin_bottom">15</property>
+                    <property name="margin_top">11</property>
+                    <property name="margin_bottom">11</property>
                     <property name="label_xalign">0</property>
                     <property name="shadow_type">in</property>
                     <child>
@@ -488,32 +486,57 @@ with the completed logo</property>
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkLabel">
+                              <object class="GtkGrid">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="margin_right">15</property>
-                                <property name="margin_bottom">15</property>
-                                <property name="label" translatable="yes">Want to make things move quicker (at least for yourself)?</property>
+                                <property name="column_spacing">50</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="margin_bottom">15</property>
+                                    <property name="label" translatable="yes">Want to make things move quicker (at least for yourself)?</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkImage">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="margin_top">6</property>
+                                    <property name="margin_bottom">6</property>
+                                    <property name="icon_name">emblem-shared-symbolic.symbolic</property>
+                                    <property name="icon_size">6</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLinkButton">
+                                    <property name="label" translatable="yes">Fork This Project on GitHub Now!!</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="margin_bottom">17</property>
+                                    <property name="relief">none</property>
+                                    <property name="uri">https://github.com/Christoffen-Corporation/asset-generator</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">2</property>
+                                    <property name="top_attach">0</property>
+                                  </packing>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
                                 <property name="fill">True</property>
                                 <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkLinkButton" id="Fork On GH">
-                                <property name="label" translatable="yes">Fork This Project on GitHub Now!!</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="has_tooltip">True</property>
-                                <property name="uri">https://github.com/Christoffen-Corporation/asset-generator</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
                               </packing>
                             </child>
                           </object>
@@ -573,16 +596,40 @@ with the completed logo</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkLabel">
+                          <object class="GtkGrid">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="margin_left">15</property>
-                            <property name="margin_right">15</property>
-                            <property name="margin_bottom">15</property>
-                            <property name="label" translatable="yes">The following is a preview for the Chat icon.
+                            <property name="row_spacing">1</property>
+                            <property name="column_spacing">25</property>
+                            <property name="baseline_row">1</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="label" translatable="yes">The following is a preview for the Chat icon.
 
-Originally designed by Elijah Clark in MS Paint, this icon has been reformatted by M. Gage Morgan to fit the Neon design language. There are several bugs.</property>
-                            <property name="wrap">True</property>
+Originally designed by Elijah Clark in MS Paint, this icon 
+has been reformatted by M. Gage Morgan to fit the Neon 
+design language. There are several bugs.
+</property>
+                              </object>
+                              <packing>
+                                <property name="left_attach">1</property>
+                                <property name="top_attach">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="icon_name">face-wink-symbolic</property>
+                                <property name="icon_size">6</property>
+                              </object>
+                              <packing>
+                                <property name="left_attach">0</property>
+                                <property name="top_attach">0</property>
+                              </packing>
+                            </child>
                           </object>
                         </child>
                       </object>
@@ -789,34 +836,61 @@ Originally designed by Elijah Clark in MS Paint, this icon has been reformatted 
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkLabel">
+                              <object class="GtkGrid">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="margin_left">15</property>
-                                <property name="margin_right">15</property>
-                                <property name="margin_bottom">15</property>
-                                <property name="label" translatable="yes">Want to make things move quicker (at least for yourself)?</property>
+                                <property name="column_spacing">50</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="margin_left">15</property>
+                                    <property name="margin_right">15</property>
+                                    <property name="margin_bottom">15</property>
+                                    <property name="label" translatable="yes">Want to make things move quicker (at least for yourself)?</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkImage">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="margin_left">6</property>
+                                    <property name="margin_right">6</property>
+                                    <property name="margin_top">6</property>
+                                    <property name="margin_bottom">6</property>
+                                    <property name="icon_name">emblem-shared-symbolic.symbolic</property>
+                                    <property name="icon_size">6</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLinkButton">
+                                    <property name="label" translatable="yes">Fork This Project on GitHub Now!!</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="margin_bottom">17</property>
+                                    <property name="relief">none</property>
+                                    <property name="uri">https://github.com/Christoffen-Corporation/asset-generator</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">2</property>
+                                    <property name="top_attach">0</property>
+                                  </packing>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
                                 <property name="fill">True</property>
                                 <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkLinkButton">
-                                <property name="label" translatable="yes">Fork This Project on GitHub Now!!</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="has_tooltip">True</property>
-                                <property name="relief">half</property>
-                                <property name="uri">https://github.com/Christoffen-Corporation/asset-generator</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
                               </packing>
                             </child>
                           </object>
@@ -852,7 +926,7 @@ Originally designed by Elijah Clark in MS Paint, this icon has been reformatted 
                 <property name="can_focus">False</property>
                 <property name="margin_left">10</property>
                 <property name="margin_right">10</property>
-                <property name="label" translatable="yes">Icons</property>
+                <property name="label" translatable="yes">Chat Icon</property>
               </object>
               <packing>
                 <property name="position">1</property>
