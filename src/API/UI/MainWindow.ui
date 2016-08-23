@@ -3,8 +3,9 @@
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkApplicationWindow" id="MainWindow">
+    <property name="width_request">800</property>
+    <property name="height_request">100</property>
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Christoffen Assets</property>
     <property name="modal">True</property>
     <property name="window_position">center</property>
     <property name="default_width">900</property>
@@ -40,8 +41,8 @@
                     <property name="can_focus">False</property>
                     <property name="margin_left">15</property>
                     <property name="margin_right">15</property>
-                    <property name="margin_top">15</property>
-                    <property name="margin_bottom">15</property>
+                    <property name="margin_top">3</property>
+                    <property name="margin_bottom">11</property>
                     <property name="label_xalign">0</property>
                     <property name="shadow_type">in</property>
                     <child>
@@ -152,8 +153,8 @@
                     <property name="can_focus">False</property>
                     <property name="margin_left">11</property>
                     <property name="margin_right">11</property>
-                    <property name="margin_top">11</property>
-                    <property name="margin_bottom">11</property>
+                    <property name="margin_top">3</property>
+                    <property name="margin_bottom">3</property>
                     <property name="label_xalign">0</property>
                     <property name="shadow_type">in</property>
                     <child>
@@ -224,8 +225,8 @@ never officially counted due to an executive decision made by Morgan to use the 
                     <property name="can_focus">False</property>
                     <property name="margin_left">11</property>
                     <property name="margin_right">11</property>
-                    <property name="margin_top">11</property>
-                    <property name="margin_bottom">11</property>
+                    <property name="margin_top">3</property>
+                    <property name="margin_bottom">3</property>
                     <property name="label_xalign">0</property>
                     <property name="shadow_type">in</property>
                     <child>
@@ -250,7 +251,6 @@ never officially counted due to an executive decision made by Morgan to use the 
                             <property name="margin_right">11</property>
                             <property name="margin_top">11</property>
                             <property name="margin_bottom">11</property>
-                            <property name="window_placement_set">False</property>
                             <property name="shadow_type">in</property>
                             <child>
                               <object class="GtkViewport" id="FirstColumnPort">
@@ -1198,6 +1198,9 @@ design language. There are several bugs.
           </packing>
         </child>
       </object>
+    </child>
+    <child type="titlebar">
+      <placeholder/>
     </child>
   </object>
 </interface>
