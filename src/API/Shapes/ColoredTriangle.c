@@ -8,7 +8,7 @@
  * in options.c
  */
 #include <cairo.h>
-#include "include.h"
+#include "../include.h"
 
 /*
  * The function declared with variables, 

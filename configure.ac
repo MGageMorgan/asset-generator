@@ -21,6 +21,6 @@ AC_CONFIG_FILES([Makefile
                  src/Assets/Makefile
 		 src/Icons/Makefile])
 
-AC_CONFIG_SUBDIRS([logogenerator-0.1])
+AC_CONFIG_SUBDIRS([asset-generator-0.1])
 AC_OUTPUT
 

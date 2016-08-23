@@ -9,7 +9,7 @@
     <property name="window_position">center</property>
     <property name="default_width">880</property>
     <property name="default_height">550</property>
-    <property name="icon">crstfn-hybrid1.png</property>
+    <property name="icon">../Images/crstfn-hybrid1.png</property>
     <property name="has_resize_grip">True</property>
     <property name="startup_id">Christoffen Assets</property>
     <child>
@@ -610,7 +610,7 @@ additional progress can be made</property>
                     <property name="height_request">310</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="pixbuf">crstfn-hybrid1.png</property>
+                    <property name="pixbuf">../Images/crstfn-hybrid1.png</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
