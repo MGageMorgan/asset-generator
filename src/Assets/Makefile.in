@@ -112,7 +112,7 @@ am__dirstamp = $(am__leading_dot)dirstamp
 am___top_builddir__bin_Assets_OBJECTS =  \
 	__top_builddir__bin_Assets-Main.$(OBJEXT) \
 	__top_builddir__bin_Assets-Logo.$(OBJEXT) \
-	../checkout/jhbuild/checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.$(OBJEXT) \
+	../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.$(OBJEXT) \
 	../checkout/jhbuild/API/JoinPieces/__top_builddir__bin_Assets-JoinTriangles.$(OBJEXT) \
 	../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-OutlinedTriangle.$(OBJEXT) \
 	__top_builddir__bin_Assets-ChatIcon.$(OBJEXT) \
@@ -270,7 +270,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-__top_builddir__bin_Assets_SOURCES = Main.c Logo.c ../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c ../checkout/jhbuild/API/JoinPieces/JoinTriangles.c ../checkout/jhbuild/API/Shapes/OutlinedTriangle.c ../checkout/jhbuild/API/include.h ../checkout/jhbuild/API/UI/MainWindow.ui ChatIcon.c ../checkout/jhbuild/API/JoinPieces/JoinIconChat.c ../checkout/jhbuild/API/Shapes/Rhombus.c ../checkout/jhbuild/API/Shapes/Polygon.c ../checkout/jhbuild/API/UI/about.png ../checkout/jhbuild/API/UI/rsz_1rsz_1chat.png ../checkout/jhbuild/API/UI/rsz_1rsz_octocat.png ../checkout/jhbuild/API/UI/GitHub-Mark-Light-64px.png ../checkout/jhbuild/API/UI/GitHub-Mark-64px.png ../checkout/jhbuild/API/UI/rsz_1rsz_image.jpg
+__top_builddir__bin_Assets_SOURCES = Main.c Logo.c ../checkout/jhbuild/API/Shapes/ColoredTriangle.c ../checkout/jhbuild/API/JoinPieces/JoinTriangles.c ../checkout/jhbuild/API/Shapes/OutlinedTriangle.c ../checkout/jhbuild/API/include.h ../checkout/jhbuild/API/UI/MainWindow.ui ChatIcon.c ../checkout/jhbuild/API/JoinPieces/JoinIconChat.c ../checkout/jhbuild/API/Shapes/Rhombus.c ../checkout/jhbuild/API/Shapes/Polygon.c ../checkout/jhbuild/API/UI/about.png ../checkout/jhbuild/API/UI/rsz_1rsz_1chat.png ../checkout/jhbuild/API/UI/rsz_1rsz_octocat.png ../checkout/jhbuild/API/UI/GitHub-Mark-Light-64px.png ../checkout/jhbuild/API/UI/GitHub-Mark-64px.png ../checkout/jhbuild/API/UI/rsz_1rsz_image.jpg
 __top_builddir__bin_Assets_CFLAGS = `pkg-config --cflags gtk+-3.0 cairo` -export-dynamic
 __top_builddir__bin_Assets_LDFLAGS = `pkg-config --libs gtk+-3.0 cairo` 
 all: all-am
@@ -348,14 +348,15 @@ uninstall-binPROGRAMS:
 
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
-../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(am__dirstamp):
-	@$(MKDIR_P) ../checkout/jhbuild/checkout/jhbuild/API/Shapes
-	@: > ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(am__dirstamp)
-../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR)
-	@: > ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR)/$(am__dirstamp)
-../checkout/jhbuild/checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.$(OBJEXT): ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(am__dirstamp) \
-	../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR)/$(am__dirstamp)
+../checkout/jhbuild/API/Shapes/$(am__dirstamp):
+	@$(MKDIR_P) ../checkout/jhbuild/API/Shapes
+	@: > ../checkout/jhbuild/API/Shapes/$(am__dirstamp)
+../checkout/jhbuild/API/Shapes/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) ../checkout/jhbuild/API/Shapes/$(DEPDIR)
+	@: > ../checkout/jhbuild/API/Shapes/$(DEPDIR)/$(am__dirstamp)
+../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.$(OBJEXT):  \
+	../checkout/jhbuild/API/Shapes/$(am__dirstamp) \
+	../checkout/jhbuild/API/Shapes/$(DEPDIR)/$(am__dirstamp)
 ../checkout/jhbuild/API/JoinPieces/$(am__dirstamp):
 	@$(MKDIR_P) ../checkout/jhbuild/API/JoinPieces
 	@: > ../checkout/jhbuild/API/JoinPieces/$(am__dirstamp)
@@ -365,12 +366,6 @@ clean-binPROGRAMS:
 ../checkout/jhbuild/API/JoinPieces/__top_builddir__bin_Assets-JoinTriangles.$(OBJEXT):  \
 	../checkout/jhbuild/API/JoinPieces/$(am__dirstamp) \
 	../checkout/jhbuild/API/JoinPieces/$(DEPDIR)/$(am__dirstamp)
-../checkout/jhbuild/API/Shapes/$(am__dirstamp):
-	@$(MKDIR_P) ../checkout/jhbuild/API/Shapes
-	@: > ../checkout/jhbuild/API/Shapes/$(am__dirstamp)
-../checkout/jhbuild/API/Shapes/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) ../checkout/jhbuild/API/Shapes/$(DEPDIR)
-	@: > ../checkout/jhbuild/API/Shapes/$(DEPDIR)/$(am__dirstamp)
 ../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-OutlinedTriangle.$(OBJEXT):  \
 	../checkout/jhbuild/API/Shapes/$(am__dirstamp) \
 	../checkout/jhbuild/API/Shapes/$(DEPDIR)/$(am__dirstamp)
@@ -395,17 +390,16 @@ mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
 	-rm -f ../checkout/jhbuild/API/JoinPieces/*.$(OBJEXT)
 	-rm -f ../checkout/jhbuild/API/Shapes/*.$(OBJEXT)
-	-rm -f ../checkout/jhbuild/checkout/jhbuild/API/Shapes/*.$(OBJEXT)
 
 distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@../checkout/jhbuild/API/JoinPieces/$(DEPDIR)/__top_builddir__bin_Assets-JoinIconChat.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../checkout/jhbuild/API/JoinPieces/$(DEPDIR)/__top_builddir__bin_Assets-JoinTriangles.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@../checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-OutlinedTriangle.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Polygon.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@../checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-Rhombus.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__bin_Assets-ChatIcon.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__bin_Assets-Logo.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/__top_builddir__bin_Assets-Main.Po@am__quote@
@@ -454,19 +448,19 @@ __top_builddir__bin_Assets-Logo.obj: Logo.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o __top_builddir__bin_Assets-Logo.obj `if test -f 'Logo.c'; then $(CYGPATH_W) 'Logo.c'; else $(CYGPATH_W) '$(srcdir)/Logo.c'; fi`
 
-../checkout/jhbuild/checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.o: ../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../checkout/jhbuild/checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.o -MD -MP -MF ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Tpo -c -o ../checkout/jhbuild/checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.o `test -f '../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c' || echo '$(srcdir)/'`../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Tpo ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c' object='../checkout/jhbuild/checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.o' libtool=no @AMDEPBACKSLASH@
+../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.o: ../checkout/jhbuild/API/Shapes/ColoredTriangle.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.o -MD -MP -MF ../checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Tpo -c -o ../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.o `test -f '../checkout/jhbuild/API/Shapes/ColoredTriangle.c' || echo '$(srcdir)/'`../checkout/jhbuild/API/Shapes/ColoredTriangle.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Tpo ../checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../checkout/jhbuild/API/Shapes/ColoredTriangle.c' object='../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../checkout/jhbuild/checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.o `test -f '../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c' || echo '$(srcdir)/'`../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.o `test -f '../checkout/jhbuild/API/Shapes/ColoredTriangle.c' || echo '$(srcdir)/'`../checkout/jhbuild/API/Shapes/ColoredTriangle.c
 
-../checkout/jhbuild/checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.obj: ../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../checkout/jhbuild/checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.obj -MD -MP -MF ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Tpo -c -o ../checkout/jhbuild/checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.obj `if test -f '../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c'; then $(CYGPATH_W) '../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c'; else $(CYGPATH_W) '$(srcdir)/../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Tpo ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c' object='../checkout/jhbuild/checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.obj' libtool=no @AMDEPBACKSLASH@
+../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.obj: ../checkout/jhbuild/API/Shapes/ColoredTriangle.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.obj -MD -MP -MF ../checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Tpo -c -o ../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.obj `if test -f '../checkout/jhbuild/API/Shapes/ColoredTriangle.c'; then $(CYGPATH_W) '../checkout/jhbuild/API/Shapes/ColoredTriangle.c'; else $(CYGPATH_W) '$(srcdir)/../checkout/jhbuild/API/Shapes/ColoredTriangle.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) ../checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Tpo ../checkout/jhbuild/API/Shapes/$(DEPDIR)/__top_builddir__bin_Assets-ColoredTriangle.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='../checkout/jhbuild/API/Shapes/ColoredTriangle.c' object='../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../checkout/jhbuild/checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.obj `if test -f '../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c'; then $(CYGPATH_W) '../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c'; else $(CYGPATH_W) '$(srcdir)/../checkout/jhbuild/checkout/jhbuild/API/Shapes/ColoredTriangle.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -c -o ../checkout/jhbuild/API/Shapes/__top_builddir__bin_Assets-ColoredTriangle.obj `if test -f '../checkout/jhbuild/API/Shapes/ColoredTriangle.c'; then $(CYGPATH_W) '../checkout/jhbuild/API/Shapes/ColoredTriangle.c'; else $(CYGPATH_W) '$(srcdir)/../checkout/jhbuild/API/Shapes/ColoredTriangle.c'; fi`
 
 ../checkout/jhbuild/API/JoinPieces/__top_builddir__bin_Assets-JoinTriangles.o: ../checkout/jhbuild/API/JoinPieces/JoinTriangles.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(__top_builddir__bin_Assets_CFLAGS) $(CFLAGS) -MT ../checkout/jhbuild/API/JoinPieces/__top_builddir__bin_Assets-JoinTriangles.o -MD -MP -MF ../checkout/jhbuild/API/JoinPieces/$(DEPDIR)/__top_builddir__bin_Assets-JoinTriangles.Tpo -c -o ../checkout/jhbuild/API/JoinPieces/__top_builddir__bin_Assets-JoinTriangles.o `test -f '../checkout/jhbuild/API/JoinPieces/JoinTriangles.c' || echo '$(srcdir)/'`../checkout/jhbuild/API/JoinPieces/JoinTriangles.c
@@ -671,8 +665,6 @@ distclean-generic:
 	-rm -f ../checkout/jhbuild/API/JoinPieces/$(am__dirstamp)
 	-rm -f ../checkout/jhbuild/API/Shapes/$(DEPDIR)/$(am__dirstamp)
 	-rm -f ../checkout/jhbuild/API/Shapes/$(am__dirstamp)
-	-rm -f ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR)/$(am__dirstamp)
-	-rm -f ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(am__dirstamp)
 	-test -z "$(top_builddir)/bin/$(am__dirstamp)" || rm -f $(top_builddir)/bin/$(am__dirstamp)
 
 maintainer-clean-generic:
@@ -683,7 +675,7 @@ clean: clean-am
 clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
 
 distclean: distclean-am
-	-rm -rf ../checkout/jhbuild/API/JoinPieces/$(DEPDIR) ../checkout/jhbuild/API/Shapes/$(DEPDIR) ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR) ./$(DEPDIR)
+	-rm -rf ../checkout/jhbuild/API/JoinPieces/$(DEPDIR) ../checkout/jhbuild/API/Shapes/$(DEPDIR) ./$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -729,7 +721,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -rf ../checkout/jhbuild/API/JoinPieces/$(DEPDIR) ../checkout/jhbuild/API/Shapes/$(DEPDIR) ../checkout/jhbuild/checkout/jhbuild/API/Shapes/$(DEPDIR) ./$(DEPDIR)
+	-rm -rf ../checkout/jhbuild/API/JoinPieces/$(DEPDIR) ../checkout/jhbuild/API/Shapes/$(DEPDIR) ./$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
